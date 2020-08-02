@@ -1,0 +1,229 @@
+/* Contents of this file
+
+    contiene el estilo propio de esta pagina
+
+*/
+
+
+    /* empieza banner */
+
+    #banner {
+        padding: 10% 9% 10%;
+        background-image: url('../images/us/us_bg_banner.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+
+        .banner-title-container {
+            padding-bottom: 2%;
+        }
+
+            .banner-title-container p{
+                font-weight: 300;
+                font-size: 1.4vw;
+                line-height: 130%;
+            }
+
+            .banner-title-container h3{
+                font-weight: 700;
+                font-size: 2.7vw;
+            }
+
+        .banner-img-and-desc-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .banner-img-and-desc-container img {
+            width: 40%;
+        }
+
+        .banner-img-and-desc-container p {
+            width: 55%;
+            font-size: 1.61vw;
+            font-weight: 400;
+            line-height: 200%;
+        }
+
+    /* empieza objetivos */
+
+    #objetivos {
+        padding: 10% 9%;
+        background-image: url('../images/us/us_bg_objetivos.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+        .objetivos-title-container {
+            text-align: center;
+            padding-bottom: 5%;
+        }
+
+            .objetivos-title-container p{
+                font-weight: 300;
+                font-size: 1.4vw;
+                line-height: 130%;
+            }
+
+            .objetivos-title-container h3{
+                font-weight: 700;
+                font-size: 2.7vw;
+            }
+
+        .objetivos-cajas-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+            .objetivos-cada-caja-container {
+                border: 2px solid rgb(0, 0, 0, .2);
+                border-radius: 5px;
+                background-color: #fff;
+                text-align: center;
+                width: 28%;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                padding: 2.5%;
+            }
+
+                .objetivos-cada-caja-container img {
+                    width: 25%;
+                    margin-bottom: 10%;
+                }
+
+                .objetivos-cada-caja-container span {
+                    font-size: 1.28vw;
+                    font-weight: 400;
+                }
+
+    /* empieza info-extra */
+
+    #info-extra {
+        padding: 10% 9%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+        #info-extra span {
+            width: 70%;
+            font-size: 1.61vw;
+            font-weight: 400;
+        }
+
+        .info-extra-img {
+            width: 55%;
+        }
+
+        .info-extra-img-movil {
+            display: none;
+        }
+
+
+/* empieza Media queries */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    #banner {
+        padding: 22% 7% 30%;
+        min-height: 100vh;
+    }
+
+            .banner-title-container p {
+                font-size: 4.6vw;
+            }
+
+            .banner-title-container h3 {
+                font-size: 7.6vw;
+            }
+
+        .banner-img-and-desc-container {
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+        }
+
+            .banner-img-and-desc-container img {
+
+                width: 100%;
+                margin-bottom: 5vw;
+            }
+
+            .banner-img-and-desc-container p {
+                width: 100%;
+                font-size: 4.12vw;
+            }
+
+    #objetivos {
+        padding: 22% 7% 12%;
+    }
+
+        .objetivos-title-container p {
+            font-size: 4.6vw;
+        }
+
+        .objetivos-title-container h3 {
+            font-size: 7.6vw;
+        }
+
+        .objetivos-cajas-container {
+            flex-direction: column;
+        }
+
+        .objetivos-cada-caja-container {
+            width: 100%;
+            padding: 9.5%;
+            margin-bottom: 22px;
+        }
+
+            .objetivos-cada-caja-container span {
+                font-size: 4.28vw;
+            }
+
+
+
+    #info-extra {
+        padding: 5% 7% 22%;
+        flex-direction: column;
+    }
+
+        #info-extra span {
+            width: 100%;
+            font-size: 4.6vw;
+            margin-bottom: 20px;
+        }
+
+        .info-extra-img {
+            display: none;
+        }
+
+        .info-extra-img-movil {
+            display: block;
+            width: 100%;
+        }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    
+}

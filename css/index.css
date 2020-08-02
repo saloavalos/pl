@@ -1,0 +1,422 @@
+/* Contents of this file
+
+    contiene el estilo propio de esta pagina
+
+*/
+
+
+/* empieza Banner */
+
+#banner {
+    background-image: url('../images/bg_particles.svg');
+    background-color: #EFFEE8;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+    .banner-main-text {
+        /* padding: 18% 7%; */
+        width: 50%;
+        z-index: 2;
+    }
+
+        .banner-main-text h1 {
+            font-weight: 700;
+            font-size: 2.7vw;
+            line-height: 135%;
+        }
+
+        .banner-main-text p {
+            padding-bottom: 4%;
+            font-weight: 300;
+            font-size: 1.75vw;
+        }
+
+        .container-btn-banner {
+            display: flex;
+        }
+
+            .btn-ver-productos {
+                font-size: 1.1vw;
+            }
+
+                .arrow_btn {
+                    margin-left: 1.5vw;
+                    width: 2.05vw;
+                }
+
+    .banner-productos {
+        width: 50%;
+        z-index: 2;
+    }
+
+        .banner-productos img {
+            width: 100%;
+        }
+
+    .banner-drawn-leaf-container img:nth-child(1) {
+        position: absolute;
+        width: 18.23vw;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+    .banner-drawn-leaf-container img:nth-child(2) {
+        position: absolute;
+        width: 18.23vw;
+        top: 0;
+        right: 0;
+        z-index: 1;
+
+    }
+
+    .banner-real-leaf-container img:nth-child(1) {
+        position: absolute;
+        width: 18.23vw;
+        bottom: -60px;
+        left: 110px;
+    }
+
+    .banner-real-leaf-container img:nth-child(2) {
+        position: absolute;
+        width: 18.15vw;
+        bottom: -55px;
+        right: -18px;
+    }
+
+/* empieza Mas populares */
+
+#mas_populares {
+    background-image: url('../images/bg_mas_populares.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 10% 9.5%;
+}
+
+    .mas-populares-title-container {
+        padding-bottom: 4%;
+    }
+
+        .mas-populares-title-container p{
+            font-weight: 300;
+            font-size: 1.4vw;
+            line-height: 130%;
+        }
+
+        .mas-populares-title-container h3{
+            font-weight: 700;
+            font-size: 2.7vw;
+        }
+
+    .productos-populares-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+        .p-popular-container {
+            border: 2px solid rgb(0, 0, 0, .1);
+            /* border: 2px solid rgb(0, 0, 0, .2); */
+            border-radius: 5px;
+            width: 22%;
+            text-align: center;
+            padding-bottom: 2.4%;
+            position: relative;
+        }
+
+        .p-popular-container:hover {
+            border: 2px solid rgb(0, 0, 0, .2);
+            transition: .2s ease-in-out;
+        }
+        .p-popular-container:hover p {
+            opacity: 1;
+            transition: .2s ease-in-out;
+        }
+
+            .p-popular-img-container {
+                padding: 4% 0;
+            }
+
+                .p-popular-img-container img{
+                    width: 100%;
+                }
+
+            .p-popular-container p {
+                font-weight: 600;
+                font-size: 1.3vw;
+                opacity: .7;
+            }
+
+            .btn-populares-container {
+                position: absolute;
+                bottom: -22px;
+                left: 0px;
+                right: 0px;
+                display: flex;
+                justify-content: center;
+            }
+
+
+            .cosa {
+                
+                background-image: url('../images/product3.png');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+/* empieza introduccion a Nosotros */
+
+#us {
+    /* min-height: 100vh;  dejarlo mientras agrego su contenido */
+    /* ya trae color de fondo el svg pero por si no cargara */
+    background-color: #F6FDF8;
+    background-image: url('../images/bg_intro_us.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 10% 9.5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+    #us > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .us-left-part {
+        width: 60%;
+    }
+
+        .us-left-part img{
+            width: 37.92vw;
+        }
+
+        .us-left-part p{
+            font-size: 1.35vw;
+            font-weight: 300;
+        }
+
+        .us-left-part h3{
+            width: 85%;
+            font-size: 2vw;
+            font-weight: 600;
+            line-height: 135%;
+            padding: 3% 0;
+        }
+
+    .us-right-part {
+        width: 40%;
+    }
+
+        .us-right-part > img {
+            width: 100%;
+        }
+
+        .us-right-part-text p:nth-child(1) {
+            font-size: 1.17vw;
+            font-weight: 600;
+            padding-bottom: 2%;
+        }
+
+        .us-right-part-text p:nth-child(2) {
+            font-size: 1.17vw;
+            font-weight: 300;
+        }
+
+
+/* empieza Media queries */
+
+/* ejemplo usando la orientación de pantalla */
+@media (orientation: landscape) and (min-width: 992px){
+    #banner {
+        /* min-height: 100vh; */
+    }
+}
+
+/* Extra small devices (phones, 600px and down) */
+/* a pesar de decir maximo, el estilo se conserva aun
+pasando esas medidas maximas */
+@media only screen and (max-width: 600px) {
+    
+    
+    #banner {
+        min-height: 100vh;
+        background-size: auto;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 25% 7% 30%;
+    }
+
+        .banner-main-text {
+            /* padding: 18% 7%; */
+            width: 100%;
+        }
+
+            .banner-main-text h1 {
+                font-weight: 700;
+                font-size: 7.79vw;
+                line-height: 135%;
+            }
+
+            .banner-main-text p {
+                padding-bottom: 4%;
+                font-weight: 300;
+                font-size: 5.5vw;
+            }
+
+        .banner-productos {
+            width: 110%;
+        }
+    
+            .banner-productos img {
+                width: 100%;
+            }
+
+        .btn-ver-productos {
+            font-size: 4.5vw;
+            padding: 2.8vw 6.4vw;
+        }
+
+            .arrow_btn {
+                margin-left: 6.5vw;
+                width: 2.5vw;
+            }
+
+        .banner-real-leaf-container {
+            display: none;
+        }
+
+    #mas_populares {
+        padding: 19% 7% 9%;
+        background-image: none;
+        position: relative;
+    }
+
+        .mas-populares-drawn-lines-top-container {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 73%;
+        }
+
+        .mas-populares-drawn-lines-top-container img {
+            width: 100%;
+        }
+
+        .mas-populares-title-container p {
+            font-size: 4.4vw;
+        }
+
+        .mas-populares-title-container h3 {
+            font-size: 6.6vw;
+        }
+        
+        .productos-populares-container {
+            flex-wrap: wrap;
+        }
+
+            .p-popular-container {
+                width: 48%;
+                padding-bottom: 8.4%;
+                margin-bottom: 13vw;
+            }
+
+            .p-popular-container p {
+                font-size: 4.1vw;
+                line-height: 135%;
+                /* de aqui pa bajo, para limitar lineas */
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                display: -webkit-box;
+                white-space: normal;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+
+            .btn-populares-container {
+                bottom: -14px;
+            }
+
+                .btn-populares {
+                    font-size: 3.4vw;
+                    padding: 1.25vw 3.6vw;
+                }
+
+                    .arrow_btn {
+                        margin-left: 4.5vw;
+                        width: 1.8vw;
+                    }
+
+    #us {
+        flex-direction: column;
+        padding: 15% 7%;
+        background-position: left;
+    }
+
+    .us-left-part {
+        width: 100%;
+    }
+
+        .us-left-part p {
+            font-size: 4.35vw;
+        }
+
+        .us-left-part h3 {
+            width: 100%;
+            font-size: 5.47vw;
+            padding: 3% 0 0;
+        }
+
+        .us-left-part img {
+            width: 100%;
+            margin: 18px 0;
+        }
+
+    .us-right-part {
+        width: 100%;
+    }
+
+        .us-right-part > img {
+            display: none;
+        }
+
+        .us-right-part-text p:nth-child(1) {
+            font-size: 3.86vw;
+        }
+
+        .us-right-part-text p:nth-child(2) {
+            font-size: 3.86vw;
+            margin-bottom: 10px;
+        }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    
+}
+
+
+            
