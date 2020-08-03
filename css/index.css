@@ -295,7 +295,7 @@ pasando esas medidas maximas */
         }
 
     #mas_populares {
-        padding: 19% 5% 9%;
+        padding: 20% 5% 10%;
         background-image: none;
         position: relative;
     }
@@ -350,6 +350,11 @@ pasando esas medidas maximas */
                     padding: 1.25vw 3.6vw;
                 }
 
+                .btn-ver-mas {
+                    font-size: 4.5vw;
+                    padding: 1.5vw 4.4vw;
+                }
+
                     .banner-arrow-btn {
                         margin-left: 4.5vw;
                         width: 2.4vw;
@@ -382,7 +387,7 @@ pasando esas medidas maximas */
 
         .us-left-part img {
             width: 100%;
-            margin: 3.2vw 0 4.4vw;
+            margin: 3.2vw 0 4.5vw;
         }
 
     .us-right-part {
@@ -399,7 +404,7 @@ pasando esas medidas maximas */
 
         .us-right-part-text p:nth-child(2) {
             font-size: 4vw;
-            margin-bottom: 3.5vw;
+            margin-bottom: 3.8vw;
         }
 }
 

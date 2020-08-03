@@ -128,7 +128,7 @@ body {
     /* empieza banner */
 
     #banner {
-        padding: 25% 5% 30%;
+        padding: 25% 5% 25%;
         min-height: unset;
     }
 
@@ -137,14 +137,14 @@ body {
         }
 
             .banner-title-container p{
-                font-size: 4.32vw;
+                font-size: 4.4vw;
                 margin-bottom: 5px;
             }
 
             .banner-title-container h3{
                 font-size: 5.32vw;
                 line-height: 135%;
-                margin-bottom: 5px;
+                margin-bottom: 2.5vw;
 
             }
 
@@ -154,7 +154,7 @@ body {
 
             .banner-cada-input-container {
                 width: 100%;
-                margin-bottom: 18px;
+                margin-bottom: 5.2vw;
             }
 
                 .banner-cada-input-container span {
@@ -162,7 +162,7 @@ body {
                 }
 
                 .banner-cada-input-container input {
-                    padding: .7vw 1.85vw;
+                    padding: 1vw 1.85vw;
                     font-size: 4.1vw;
                 }
 
@@ -172,7 +172,7 @@ body {
 
             .banner-input-message-container {
                 width: 100%;
-                margin-bottom: 18px;
+                margin-bottom: 5.2vw;
                 padding-right: 0;
             }
 
@@ -186,13 +186,13 @@ body {
                 }
 
             .banner-captcha {
-                width: 82%;
+                width: 84%;
                 margin-bottom: 18px;
             }
 
-        .btn-populares {
-            font-size: 3.9vw;
-            padding: 1.25vw 3.6vw;
+        .btn-ver-mas {
+            font-size: 4.5vw;
+            padding: 1.5vw 4.4vw;
         }
 
             .arrow_btn {
