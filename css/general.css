@@ -43,11 +43,8 @@
 
 body {
     background: #fff;
-    /* min-height: 100vh; */
     overflow-x: hidden; /* no me gusta pero por mientras */
 }
-
-html, body { height:100%;}
 
     header {
         width: 100%;
