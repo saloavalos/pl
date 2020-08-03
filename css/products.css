@@ -98,7 +98,7 @@
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     #productos {
-        padding: 19% 7% 9%;
+        padding: 19% 5% 9%;
         background-image: none;
         position: relative;
     }
@@ -134,11 +134,11 @@
             }
 
             .btn-populares-container {
-                bottom: -14px;
+                bottom: -4vw;
             }
 
                 .btn-populares {
-                    font-size: 3.4vw;
+                    font-size: 3.9vw;
                     padding: 1.25vw 3.6vw;
                 }
 

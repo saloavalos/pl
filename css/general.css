@@ -330,7 +330,7 @@ pasando esas medidas maximas */
 @media only screen and (max-width: 600px) {
     header {
         /* transition: 1.8s ease-in-out; */
-        min-height: 8vh;
+        height: 8vh;
         align-items: center;
         display: flex;
     }
@@ -354,19 +354,20 @@ pasando esas medidas maximas */
         background-color: #fff;
         /* box-shadow: 0 2px 15px 0 rgba(0,0,0,0.15); */
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: unset;
         width: 50%;
         transform: translateX(100%);
         transition: transform 0.5s ease-in;
     }
 
             .nav-link {
-                font-size: 3.8vw;
+                font-size: 4.2vw;
                 font-weight: 600;
             }
 
                 .nav-item {
                     opacity: 0;
+                    padding: 10vw 1.4vw;
                 }
 
         .nav-item-wa {
@@ -482,7 +483,7 @@ pasando esas medidas maximas */
         }
 
             .footer-redes-fb-logo {
-                width: 33px;
+                width: 8.4vw;
             }
 
         .footer-movil-divisor {
@@ -490,7 +491,8 @@ pasando esas medidas maximas */
             height: 2px;
             border-width: 0;
             background-color: #C4C4C4;
-            margin: 10px 0;
+            margin: 4vw 0;
+            opacity: .8;
         }
 
         .developedby {

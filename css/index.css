@@ -252,7 +252,7 @@ pasando esas medidas maximas */
         flex-direction: column-reverse;
         justify-content: flex-end;
         align-items: center;
-        padding: 25% 7% 30%;
+        padding: 25% 5% 5%;
     }
 
         .banner-main-text {
@@ -295,7 +295,7 @@ pasando esas medidas maximas */
         }
 
     #mas_populares {
-        padding: 19% 7% 9%;
+        padding: 19% 5% 9%;
         background-image: none;
         position: relative;
     }
@@ -342,13 +342,18 @@ pasando esas medidas maximas */
             }
 
             .btn-populares-container {
-                bottom: -14px;
+                bottom: -4vw;
             }
 
                 .btn-populares {
-                    font-size: 3.4vw;
+                    font-size: 3.9vw;
                     padding: 1.25vw 3.6vw;
                 }
+
+                    .banner-arrow-btn {
+                        margin-left: 4.5vw;
+                        width: 2.4vw;
+                    }
 
                     .arrow_btn {
                         margin-left: 4.5vw;
@@ -357,7 +362,7 @@ pasando esas medidas maximas */
 
     #us {
         flex-direction: column;
-        padding: 15% 7%;
+        padding: 15% 5%;
         background-position: left;
     }
 
@@ -389,11 +394,11 @@ pasando esas medidas maximas */
         }
 
         .us-right-part-text p:nth-child(1) {
-            font-size: 3.86vw;
+            font-size: 4vw;
         }
 
         .us-right-part-text p:nth-child(2) {
-            font-size: 3.86vw;
+            font-size: 4vw;
             margin-bottom: 10px;
         }
 }

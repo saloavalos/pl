@@ -128,7 +128,7 @@ body {
     /* empieza banner */
 
     #banner {
-        padding: 25% 7% 30%;
+        padding: 25% 5% 30%;
         min-height: unset;
     }
 
@@ -173,6 +173,7 @@ body {
             .banner-input-message-container {
                 width: 100%;
                 margin-bottom: 18px;
+                padding-right: 0;
             }
 
                 .banner-input-message-container span {
@@ -185,12 +186,12 @@ body {
                 }
 
             .banner-captcha {
-                width: 77%;
+                width: 82%;
                 margin-bottom: 18px;
             }
 
         .btn-populares {
-            font-size: 3.4vw;
+            font-size: 3.9vw;
             padding: 1.25vw 3.6vw;
         }
 
