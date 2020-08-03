@@ -339,6 +339,10 @@ pasando esas medidas maximas */
         transition: .1s ease-in-out;
     }
 
+    header.sticky .navbar-logo img {
+        width: 10vw;
+    }
+
     .navbar-logo img {
         width: 15.15vw;
         /* display: flex;

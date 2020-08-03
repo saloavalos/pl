@@ -316,7 +316,7 @@ pasando esas medidas maximas */
         }
 
         .mas-populares-title-container h3 {
-            font-size: 6.6vw;
+            font-size: 6.9vw;
         }
         
         .productos-populares-container {
@@ -371,18 +371,18 @@ pasando esas medidas maximas */
     }
 
         .us-left-part p {
-            font-size: 4.35vw;
+            font-size: 4.4vw;
         }
 
         .us-left-part h3 {
             width: 100%;
-            font-size: 5.47vw;
+            font-size: 5.5vw;
             padding: 3% 0 0;
         }
 
         .us-left-part img {
             width: 100%;
-            margin: 18px 0;
+            margin: 3.1vw 0 4.2vw;
         }
 
     .us-right-part {
@@ -399,7 +399,7 @@ pasando esas medidas maximas */
 
         .us-right-part-text p:nth-child(2) {
             font-size: 4vw;
-            margin-bottom: 10px;
+            margin-bottom: 3vw;
         }
 }
 
