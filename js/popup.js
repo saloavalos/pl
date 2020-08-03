@@ -32,7 +32,6 @@ btn_cerrar_popup_img.addEventListener('click', function(){
 });
 
 
-
 // overlay_popup_img.addEventListener('click', function(e){
 // 	e.preventDefault();
 // 	overlay_popup_img.classList.remove('overlay-activated');

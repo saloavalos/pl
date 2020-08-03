@@ -246,13 +246,13 @@ pasando esas medidas maximas */
     
     
     #banner {
-        min-height: 100vh;
+        max-height: 100vh;
         background-size: auto;
         display: flex;
         flex-direction: column-reverse;
         justify-content: flex-end;
         align-items: center;
-        padding: 25% 5% 5%;
+        padding: 25% 5% 20%;
     }
 
         .banner-main-text {
@@ -281,8 +281,8 @@ pasando esas medidas maximas */
             }
 
         .btn-ver-productos {
-            font-size: 4.5vw;
-            padding: 2.8vw 6.4vw;
+            font-size: 4.4vw;
+            padding: 2.2vw 5.8vw;
         }
 
             .arrow_btn {
