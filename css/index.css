@@ -246,7 +246,7 @@ pasando esas medidas maximas */
     
     
     #banner {
-        max-height: 100vh;
+        min-height: 100vh;
         background-size: auto;
         display: flex;
         flex-direction: column-reverse;
