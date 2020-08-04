@@ -36,15 +36,8 @@
             burger.classList.toggle('burger-toggle-animate');
 
         });
+        
     }
-
-    document.body.addEventListener('click', () => {
-        // console.log(event.target);
-        // console.log(event.target.tagName);
-        // var x = document.querySelector(event.target).attributes('id');
-        var e = event.target.nodeName;
-        // console.log(window.event.target.id);
-    });
 
     navSlide();
 
@@ -52,5 +45,6 @@
     // const app = () => {
     //     navSlide();
     //     navSlide();
-    //     navSlide();
     // }
+
+

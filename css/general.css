@@ -358,7 +358,8 @@ pasando esas medidas maximas */
         /* box-shadow: 0 2px 15px 0 rgba(0,0,0,0.15); */
         flex-direction: column;
         justify-content: unset;
-        width: 50%;
+        /* el tamaño que abarca el menu cuando doy click en el burger */
+        width: 100%;
         transform: translateX(100%);
         transition: transform 0.5s ease-in;
     }
