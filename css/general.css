@@ -336,6 +336,7 @@ pasando esas medidas maximas */
 
     header.sticky-movil {
         background-color: #fff;
+        overflow: hidden;
         transition: .1s ease-in-out;
     }
 

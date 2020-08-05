@@ -217,7 +217,9 @@
 @media only screen and (max-width: 600px) {
     #producto-seleccionado {
         padding: 21% 5% 25%;
-        background-image: none;
+        /* background-image: none; */
+        background-image: url('../images/bg_particles.svg');
+        background-size: auto;
         flex-direction: column;
     }
 
@@ -234,7 +236,7 @@
     }
 
         .p-seleccionado-name-container {
-            font-size: 7vw;
+            font-size: 7.8vw;
             padding: 4% 0 3%;
             order: 1;
         }
@@ -273,19 +275,18 @@
         }
 
     .btn-populares-container {
-        bottom: -14px;
         order: 2;
         margin: 0 0 8vw;
         justify-content: center;
     }
 
-        .btn-ver-productos {
-            font-size: 3.8vw;
-            padding: 2.8vw 6.4vw;
+        .btn-p-selected {
+            font-size: 3.9vw;
+            padding: 2.8vw 6.2vw;
         }
 
-            .arrow_btn {
-                margin-left: 4.5vw;
+            .p-selected-arrow-btn {
+                margin-left: 5.2vw;
                 width: 1.8vw;
             }
 }
