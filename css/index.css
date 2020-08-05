@@ -335,6 +335,7 @@ pasando esas medidas maximas */
             }
 
             .p-popular-container p {
+                padding: 0 4%;
                 font-size: 4.1vw;
                 line-height: 135%;
                 /* de aqui pa bajo, para limitar lineas */
