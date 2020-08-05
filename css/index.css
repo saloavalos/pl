@@ -246,11 +246,12 @@ pasando esas medidas maximas */
     
     
     #banner {
-        height: 90vh;
+        min-height: 90vh;
         background-size: auto;
         display: flex;
-        flex-direction: column-reverse;
-        justify-content: flex-end;
+        /* flex-direction: column-reverse; */
+        flex-direction: column;
+        /* justify-content: flex-end; */
         align-items: center;
         padding: 25% 5% 20%;
     }
@@ -273,14 +274,14 @@ pasando esas medidas maximas */
             }
 
         .banner-productos {
+            display: none;
+        }
+
+        .banner-productos-movil {
             width: 110%;
         }
-    
-            .banner-productos img:nth-child(1) {
-                display: none;
-            }
 
-            .banner-productos img {
+            .banner-productos-movil img {
                 width: 100%;
             }
 

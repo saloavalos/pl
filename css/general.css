@@ -365,13 +365,13 @@ pasando esas medidas maximas */
     }
 
             .nav-link {
-                font-size: 4.2vw;
+                font-size: 4.5vw;
                 font-weight: 600;
             }
 
                 .nav-item {
                     opacity: 0;
-                    padding: 10vw 1.4vw;
+                    padding: 11vw 1.4vw;
                 }
 
         .nav-item-wa {
