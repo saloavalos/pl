@@ -5,8 +5,6 @@
 
 */
 
-/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap'); */
-
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
 
 /* Info de Open Sans font
@@ -36,22 +34,25 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* font-family: 'Montserrat', sans-serif; */
     font-family: 'Biryani', sans-serif;
     color: var(--title-color);
 }
 
 body {
     background: #fff;
-    overflow-x: hidden; /* no me gusta pero por mientras */
+    overflow-x: hidden;
 }
 
+    /* empieza header */
     header {
         width: 100%;
         position: fixed;
         padding: .5% 6%;
         top: 0;
         z-index: 1234;
+        height: 8vh;
+        align-items: center;
+        display: flex;
         transition: .6s ease-in-out;
     }
 
@@ -61,9 +62,20 @@ body {
         transition: .2s ease-in-out;
     }
 
+    header.sticky-movil {
+        background-color: #fff;
+        transition: .1s ease-in-out;
+    }
+
     header.sticky .navbar-logo img {
-        width: 4.39vw;
+        width: 11vw;
         transition: .2s ease-in-out;
+    }
+
+    .navbar-logo img {
+        width: 15.15vw;
+        /* display: flex;
+        transition: .2s ease-in-out; */
     }
 
         .navbar {
@@ -74,281 +86,16 @@ body {
             text-transform: uppercase;
             transition: .6s ease-in-out;
         }
-            .navbar-logo {
-                transition: .6s ease-in-out;
-            }
 
-                .navbar-logo img {
-                    width: 5.85vw;
-                    display: flex;
-                    transition: .2s ease-in-out;
-                }
+        .navbar-logo {
+            transition: .6s ease-in-out;
+        }
 
-
-            .navbar-sections {
+            .navbar-logo img {
+                width: 5.85vw;
                 display: flex;
-                align-items: center;
+                transition: .2s ease-in-out;
             }
-
-                .nav-item {
-                    list-style: none;
-                    padding: 0 1.4vw;
-                }
-
-                    .nav-link {
-                        font-family: 'Open Sans', sans-serif;
-                        /* el padding mejor lo movi a nav-item
-                        para que el efecto de underline sea menos ancho */
-                        /* padding: 0 1.4vw; */
-                        text-decoration: none;
-                        color: var(--title-color);
-                        opacity: 1;
-                        font-weight: 600;
-                        font-size: 1.25vw;
-                        position: relative;
-                    }
-
-                        .nav-link::after {
-                            content: '';
-                            width: 0%;
-                            height: 4px;
-                            background-color: #8CD258;
-                            border-radius: 10px;
-                            opacity: .5;
-                            position: absolute;
-                            bottom: -22%;
-                            left: 50%;
-                            transition: all .2s ease-in-out;
-                        }
-
-                        .nav-link:hover::after {
-                            left: 0%;
-                            width: 100%;
-                        }
-
-                    .active {
-                        /* opacity: .6;width: 3.2vw; */
-                    }
-
-                .nav-item-wa {
-                    list-style: none;
-                    /* si uso % en vez de vw como en los <li>
-                    anteriores, me carga mal el tamaño del boton.
-                    de manera random  */
-                    /* padding: 0 0 0 6%; */
-                    padding: 0 0 0 4.8vw;
-                }
-
-                    .btn-wa {
-                        font-size: 1.25vw;
-                    }
-
-                        .wa_btn {
-                            display: flex;
-                            padding-right: 10%;
-                            width: 2.7vw;
-                        }
-
-            .burger {
-                display: none;
-                cursor: pointer;
-            }
-
-                .burger div {
-                    width: 25px;
-                    height: 4px;
-                    border-radius: 5px;
-                    background-color: var(--title-color);
-                    margin: 4px 0;
-                    transition: all 0.3s ease;
-                }
-
-                .burger-toggle-animate .burger-line1 {
-                    transform: rotate(-45deg) translate(-5px, 6px);
-                }
-
-                .burger-toggle-animate .burger-line2 {
-                    opacity: 0;
-                }
-
-                .burger-toggle-animate .burger-line3 {
-                    transform: rotate(45deg) translate(-5px, -6px);
-                }
-
-
-
-            
-
-    /* empieza ver mas animation */
-    
-    .scrollanimation-container {
-        position: absolute;
-        left: 50%;
-        bottom: -4vw;
-        transform: translate(-50%, -100%);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-        .scrollanimation {
-            width: 2vw;
-            height: 3.3vw;
-            border: 2px solid #8CD258;
-            border-radius: 50px;
-        }
-
-            .scrollanimation::before {
-                content: '';
-                width: .45vw;
-                height: .45vw;
-                position: absolute;
-                /* top: 10px; */
-                top: .83vw;
-                left: 50%;
-                transform: translateX(-50%);
-                background-color: var(--title-color);
-                border-radius: 50%;
-                opacity: 1;
-                animation: mouse 2s infinite;
-            }
-
-            @keyframes mouse {
-                from {
-                    opacity: 1;
-                    /* top: 10px; */
-                    top: .83vw;
-                }
-                to {
-                    opacity: 0;
-                    /* top: 25px; */
-                    top: 1.82vw;
-                }
-            }
-
-        .scrollanimation-container span {
-            font-family: 'Open Sans', sans-serif;
-            font-size: .95vw;
-            font-weight: 600;
-            padding-top: .9vw;
-        }
-
-
-
-    /* empieza footer */
-
-    footer {
-        background: #E1E1E1;
-        min-height: 5.75vw;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1% 9.5%;
-    }
-
-        .footer-redes-and-copyright-container {
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            width: 75%;
-        }
-    
-            .footer-otras-redes-container, .footer-otras-redes-container a {
-                display: flex;
-                align-items: center;
-            }
-        
-                .footer-otras-redes-container a {
-                    padding-left: 0.87vw;
-                    width: 2.7vw;
-                }
-        
-            .footer-text {
-                font-family: 'Open Sans', sans-serif;
-                font-size: 1.1vw;
-                font-weight: 400;
-            }
-            
-            .footer-copyright {
-                opacity: .75;
-            }
-    
-        .developedby {
-            text-decoration: none;
-            width: 25%;
-        }
-
-        @media screen and (max-width: 768px) {
-            /* body {
-                display: none;
-            } */
-        }
-
-/***********************
-btn-general VALUES
-************************/
-.btn-general {
-    display: flex;
-    align-items: center;
-    font-family: 'Open Sans', sans-serif;
-    padding: 0.66vw 1.6vw;;
-    border: 0 none;
-    font-weight: 600;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    background: #8CD258;
-    border: 2px solid #8CD258; 
-    color: #fff;
-    text-decoration: none;
-    border-radius: 35px;
-    transition: .2s ease-in-out;
-}
-
-    .btn-general:focus{
-        text-decoration: none;
-        color: #fff;
-        transition: .2s ease-in-out;
-    }
-    .btn-general:hover {
-        text-decoration: none;
-        background: #8ADD4D;
-        border-color: #8ADD4D;
-        color: #fff;
-        transition: .2s ease-in-out;
-    }
-    .btn-general:active {
-        background: #8FDE54;
-        transition: .2s ease-in-out;
-    }
-
-/* empieza Media queries */
-
-/* Extra small devices (phones, 600px and down) */
-/* a pesar de decir maximo, el estilo se conserva aun
-pasando esas medidas maximas */
-@media only screen and (max-width: 600px) {
-    header {
-        /* transition: 1.8s ease-in-out; */
-        height: 8vh;
-        align-items: center;
-        display: flex;
-    }
-
-    header.sticky-movil {
-        background-color: #fff;
-        overflow: hidden;
-        transition: .1s ease-in-out;
-    }
-
-    header.sticky .navbar-logo img {
-        width: 11vw;
-    }
-
-    .navbar-logo img {
-        width: 15.15vw;
-        /* display: flex;
-        transition: .2s ease-in-out; */
-    }
 
     .navbar-sections {
         position: absolute;
@@ -357,22 +104,51 @@ pasando esas medidas maximas */
         height: 92vh;
         background-color: #fff;
         /* box-shadow: 0 2px 15px 0 rgba(0,0,0,0.15); */
+        display: flex;
         flex-direction: column;
         justify-content: unset;
+        align-items: center;
         /* el tamaño que abarca el menu cuando doy click en el burger */
         width: 100%;
         transform: translateX(100%);
         transition: transform 0.5s ease-in;
     }
 
+        .nav-item {
+            list-style: none;
+            padding: 11vw 1.4vw;
+            opacity: 0;
+        }
+
             .nav-link {
                 font-size: 4.7vw;
                 font-weight: 600;
+                font-family: 'Open Sans', sans-serif;
+                /* el padding mejor lo movi a nav-item
+                para que el efecto de underline sea menos ancho */
+                /* padding: 0 1.4vw; */
+                text-decoration: none;
+                color: var(--title-color);
+                opacity: 1;
+                position: relative;
             }
 
-                .nav-item {
-                    opacity: 0;
-                    padding: 11vw 1.4vw;
+                .nav-link::after {
+                    content: '';
+                    width: 0%;
+                    height: 4px;
+                    background-color: #8CD258;
+                    border-radius: 10px;
+                    opacity: .5;
+                    position: absolute;
+                    bottom: -22%;
+                    left: 50%;
+                    transition: all .2s ease-in-out;
+                }
+
+                .nav-link:hover::after {
+                    left: 0%;
+                    width: 100%;
                 }
 
         .nav-item-wa {
@@ -381,7 +157,29 @@ pasando esas medidas maximas */
 
     .burger {
         display: block;
+        cursor: pointer;
     }
+
+        .burger div {
+            width: 25px;
+            height: 4px;
+            border-radius: 5px;
+            background-color: var(--title-color);
+            margin: 4px 0;
+            transition: all 0.3s ease;
+        }
+
+        .burger-toggle-animate .burger-line1 {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+
+        .burger-toggle-animate .burger-line2 {
+            opacity: 0;
+        }
+
+        .burger-toggle-animate .burger-line3 {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
 
     .burger-active {
         transform: translateX(0%);
@@ -411,7 +209,6 @@ pasando esas medidas maximas */
 
 
     /* empieza ver mas animation */
-    
     .scrollanimation-container {
         position: absolute;
         left: 50%;
@@ -420,7 +217,6 @@ pasando esas medidas maximas */
         display: flex;
         flex-direction: column;
         align-items: center;
-
         /* ocultarlo en pantallas muy pequeñas */
         display: none;
 
@@ -438,7 +234,6 @@ pasando esas medidas maximas */
                 width: 2.2vw;
                 height: 2.2vw;
                 position: absolute;
-                /* top: 10px; */
                 top: 2.7vw;
                 left: 50%;
                 transform: translateX(-50%);
@@ -451,44 +246,61 @@ pasando esas medidas maximas */
             @keyframes mouse {
                 from {
                     opacity: 1;
-                    /* top: 10px; */
                     top: 2.7vw;
                 }
                 to {
                     opacity: 0;
-                    /* top: 25px; */
                     top: 6.25vw;
                 }
             }
 
         .scrollanimation-container span {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 600;
             font-size: 3.9vw;
             padding-top: 1.9vw;
         }
 
     footer {
+        background: #E1E1E1;
+        min-height: 5.75vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         flex-direction: column;
         padding: 5% 9.5%;
     }
 
         .footer-redes-and-copyright-container {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
             width: 100%;
         }
 
-            .footer-copyright {
-                margin-left: 19px;
+            .footer-otras-redes-container, .footer-otras-redes-container a {
+                display: flex;
+                align-items: center;
             }
 
-        .footer-text {
-            font-size: 3.4vw;
-        }
+                .footer-text {
+                    font-family: 'Open Sans', sans-serif;
+                    font-weight: 400;
+                    font-size: 3.4vw;
+                }
+        
+                .footer-redes-text{
+                    display: none;
+                }
 
-        .footer-redes-text{
-            display: none;
-        }
+                .footer-redes-fb-logo {
+                    width: 8.4vw;
+                }
 
-            .footer-redes-fb-logo {
-                width: 8.4vw;
+
+            .footer-copyright {
+                opacity: .75;
+                margin-left: 19px;
             }
 
         .footer-movil-divisor {
@@ -501,13 +313,51 @@ pasando esas medidas maximas */
         }
 
         .developedby {
+            text-decoration: none;
             display: flex;
             justify-content: center;
             width: 100%;
         }
 
-}
+    /***********************
+    btn-general VALUES
+    ************************/
+    .btn-general {
+        display: flex;
+        align-items: center;
+        font-family: 'Open Sans', sans-serif;
+        padding: 0.66vw 1.6vw;;
+        border: 0 none;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        background: #8CD258;
+        border: 2px solid #8CD258; 
+        color: #fff;
+        text-decoration: none;
+        border-radius: 35px;
+        transition: .2s ease-in-out;
+    }
 
+        .btn-general:focus{
+            text-decoration: none;
+            color: #fff;
+            transition: .2s ease-in-out;
+        }
+        .btn-general:hover {
+            text-decoration: none;
+            background: #8ADD4D;
+            border-color: #8ADD4D;
+            color: #fff;
+            transition: .2s ease-in-out;
+        }
+        .btn-general:active {
+            background: #8FDE54;
+            transition: .2s ease-in-out;
+        }
+
+/* empieza Media queries */
+    
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
     
@@ -525,7 +375,120 @@ pasando esas medidas maximas */
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-    
+
+    header.sticky .navbar-logo img {
+        width: 4.39vw;
+    }
+
+        /* .navbar {
+            transition: .6s ease-in-out;
+        } */
+            .navbar-logo {
+                transition: .6s ease-in-out;
+            }
+
+                .navbar-logo img {
+                    width: 5.85vw;
+                    display: flex;
+                    transition: .2s ease-in-out;
+                }
+
+            /* .navbar-sections {
+                
+            } */
+
+                .nav-item {
+                    padding: 0 1.4vw;
+                }
+
+                    .nav-link {
+                        font-size: 1.25vw;
+                    }
+
+                        /* .nav-link::after {
+                        }
+
+                        .nav-link:hover::after {
+                        } */
+
+                .nav-item-wa {
+                    display: block;
+                    list-style: none;
+                    /* si uso % en vez de vw como en los <li>
+                    anteriores, me carga mal el tamaño del boton.
+                    de manera random  */
+                    /* padding: 0 0 0 6%; */
+                    padding: 0 0 0 4.8vw;
+                }
+
+                    .btn-wa {
+                        font-size: 1.25vw;
+                    }
+
+                        .wa_btn {
+                            display: flex;
+                            padding-right: 10%;
+                            width: 2.7vw;
+                        }
+
+            .burger {
+                display: none;
+            }
+
+    /* empieza ver mas animation */
+    .scrollanimation-container {
+        left: 50%;
+        bottom: -4vw;
+    }
+
+        .scrollanimation {
+            width: 2vw;
+            height: 3.3vw;
+        }
+
+            .scrollanimation::before {
+                width: .45vw;
+                height: .45vw;
+                top: .83vw;
+                border-radius: 50%;
+            }
+
+            @keyframes mouse {
+                from {
+                    opacity: 1;
+                    top: .83vw;
+                }
+                to {
+                    opacity: 0;
+                    top: 1.82vw;
+                }
+            }
+
+        .scrollanimation-container span {
+            font-size: .95vw;
+            padding-top: .9vw;
+        }
+
+    /* empieza footer */
+    footer {
+        padding: 1% 9.5%;
+    }
+
+    .footer-redes-and-copyright-container {
+        width: 75%;
+    }
+
+    .footer-redes-fb-logo {
+        margin-left: 0.87vw;
+        width: 2.7vw;
+    }
+        .footer-text {
+            font-size: 1.1vw;
+        }
+        
+    .developedby {
+        width: 25%;
+    }
 }
 
 
