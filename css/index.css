@@ -276,6 +276,10 @@ pasando esas medidas maximas */
             width: 110%;
         }
     
+            .banner-productos img:nth-child(1) {
+                display: none;
+            }
+
             .banner-productos img {
                 width: 100%;
             }
