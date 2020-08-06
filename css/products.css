@@ -4,16 +4,16 @@
 
 */
 
-
-/* empieza Banner */
-
+/* empieza productos */
 #productos {
     min-height: 100vh;
-    background-image: url('../images/bg_productos.png');
+    padding: 21% 5% 25%;
+    /* background-image: none; */
+    background-image: url('../images/bg_particles.svg');
     background-position: center;
     background-repeat: repeat-y;
-    background-size: contain;
-    padding: 10% 9% 5%;
+    background-size: auto;
+    position: relative;
 }
 
     .productos-title-container {
@@ -21,17 +21,17 @@
         position: relative;
     }
 
-        .productos-title-container p{
+        .productos-title-container p {
             font-weight: 300;
-            font-size: 1.4vw;
+            font-size: 4.4vw;
             line-height: 130%;
         }
 
-        .productos-title-container h3{
+        .productos-title-container h3 {
             font-weight: 700;
-            font-size: 2.7vw;
+            font-size: 6.9vw;
         }
-
+        
     .productos-wrap-container {
         display: flex;
         flex-wrap: wrap;
@@ -39,116 +39,75 @@
     }
 
         .each-product-container {
+            width: 48%;
             background-color: #fff;
             border: 2px solid rgb(0, 0, 0, .1);
-            /* border: 2px solid rgb(0, 0, 0, .2); */
             border-radius: 5px;
-            width: 22%;
-            /* width: 100%; */
             text-align: center;
-            /* 35 pixels for top, 70 pixels for right and left, and to 50 pixels for bottom */
-            padding: 1% 1.2% 2.5%;
+            padding: 1% 1.2% 8.4%;
+            margin-bottom: 13vw;
             position: relative;
         }
 
-        .each-product-container:hover {
-            border: 2px solid rgb(0, 0, 0, .2);
-            transition: .2s ease-in-out;
-        }
-        .each-product-container:hover p {
-            opacity: 1;
-            transition: .2s ease-in-out;
-        }
-
-            .each-product-img-container {
-                padding: 4% 0;
+            .each-product-container:hover {
+                border: 2px solid rgb(0, 0, 0, .2);
+                transition: .2s ease-in-out;
             }
 
-                .each-product-img-container img{
-                    /* con pocertanje no funciona el flex-wrap: wrap */
-                    width: 100%;
-                    /* width: 210px; */
+        .each-product-img-container {
+            padding: 4% 0;
+        }
+
+            .each-product-img-container img{
+                /* con pocertanje no funciona el flex-wrap: wrap */
+                width: 100%;
+                /* width: 210px; */
+            }
+
+        .each-product-container p {
+            font-weight: 600;
+            font-size: 4.1vw;
+            opacity: .7;
+            line-height: 135%;
+            /* de aqui pa bajo, para limitar lineas */
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            display: -webkit-box;
+            white-space: normal;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+
+            .each-product-container:hover p {
+                opacity: 1;
+                transition: .2s ease-in-out;
+            }
+
+        .btn-populares-container {
+            position: absolute;
+            bottom: -4.5vw;
+            left: 0px;
+            right: 0px;
+            display: flex;
+            justify-content: center;
+        }
+
+            .btn-populares {
+                font-size: 3.9vw;
+                padding: 1.25vw 3.6vw;
+            }
+
+                .arrow_btn {
+                    margin-left: 4.5vw;
+                    width: 1.8vw;
                 }
 
-            .each-product-container p {
-                font-weight: 600;
-                font-size: 1.3vw;
-                opacity: .7;
-            }
-
-            .btn-populares-container {
-                position: absolute;
-                bottom: -22px;
-                left: 0px;
-                right: 0px;
-                display: flex;
-                justify-content: center;
-            }
-
-                .btn-populares {
-                    font-size: 1.1vw;
-                }
-    
-                    .arrow_btn {
-                        margin-left: 1.5vw;
-                        width: 2.05vw;
-                    }
 
 /* empieza Media queries */
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-    #productos {
-        padding: 21% 5% 25%;
-        /* background-image: none; */
-        background-image: url('../images/bg_particles.svg');
-        background-size: auto;
-        position: relative;
-    }
-
-        .productos-title-container p {
-            font-size: 4.4vw;
-        }
-
-        .productos-title-container h3 {
-            font-size: 6.9vw;
-        }
-        
-        .productos-wrap-container {
-            flex-wrap: wrap;
-        }
-
-            .each-product-container {
-                width: 48%;
-                padding-bottom: 8.4%;
-                margin-bottom: 13vw;
-            }
-
-            .each-product-container p {
-                font-size: 4.1vw;
-                line-height: 135%;
-                /* de aqui pa bajo, para limitar lineas */
-                -webkit-line-clamp: 2;
-                -webkit-box-orient: vertical;
-                display: -webkit-box;
-                white-space: normal;
-                text-overflow: ellipsis;
-                overflow: hidden;
-            }
-
-            .btn-populares-container {
-                bottom: -4.5vw;
-            }
-
-                .btn-populares {
-                    font-size: 3.9vw;
-                    padding: 1.25vw 3.6vw;
-                }
-
-                    .arrow_btn {
-                        margin-left: 4.5vw;
-                        width: 1.8vw;
-                    }
+    
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -168,5 +127,43 @@
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-    
+    /* empieza productos */
+    #productos {
+        background-image: url('../images/bg_productos.png');
+        background-size: contain;
+        padding: 10% 9% 5%;
+    }
+
+        .productos-title-container {
+            padding-bottom: 2%;
+        }
+
+            .productos-title-container p{
+                font-size: 1.4vw;
+            }
+
+            .productos-title-container h3{
+                font-size: 2.7vw;
+            }
+
+            .each-product-container {
+                width: 22%;
+            }
+
+                .each-product-container p {
+                    font-size: 1.3vw;
+                }
+
+                .btn-populares-container {
+                    bottom: -22px;
+                }
+
+                    .btn-populares {
+                        font-size: 1.1vw;
+                    }
+        
+                        .arrow_btn {
+                            margin-left: 1.5vw;
+                            width: 2.05vw;
+                        }
 }

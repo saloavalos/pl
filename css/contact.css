@@ -4,194 +4,110 @@
 
 */
 
-
-body {
-    background-image: url('../images/contact/contact_bg.svg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+/* empieza banner */
+#banner {
+    padding: 21% 5% 25%;
 }
 
-    /* empieza banner */
-
-    #banner {
-        padding: 10% 9% 5%;
-        min-height: 100vh;
+    .banner-title-container {
+        padding-bottom: 3%;
     }
 
-        .banner-title-container {
-            padding-bottom: 3%;
+        .banner-title-container p{
+            font-weight: 300;
+            font-size: 4.4vw;
+            line-height: 130%;
+            margin-bottom: 5px;
         }
 
-            .banner-title-container p{
-                font-size: 1.32vw;
-                font-weight: 300;
-                line-height: 130%;
-            }
+        .banner-title-container h3{
+            font-weight: 400;
+            font-size: 5.32vw;
+            line-height: 135%;
+            margin-bottom: 2.5vw;
 
-            .banner-title-container h3{
-                font-size: 1.83vw;
-                font-weight: 400;
-            }
+        }
 
-        .banner-inputs-row1-container {
+    .banner-inputs-row1-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+        .banner-cada-input-container {
             display: flex;
-            justify-content: space-between;
-            padding-bottom: 4%;
+            flex-direction: column;
+            width: 100%;
+            margin-bottom: 5.2vw;
         }
 
-            .banner-cada-input-container {
-                width: 30%;
-                display: flex;
-                flex-direction: column;
+            .banner-cada-input-container span {
+                font-weight: 400;
+                font-size: 4.25vw;
             }
 
-                .banner-cada-input-container span {
-                    font-size: 1.25vw;
-                    font-weight: 400;
-                }
-
-                .banner-cada-input-container input {
-                    outline: none;
-                    border: 2px solid rgb(0, 0, 0, .2);
-                    border-radius: 5px;
-                    padding: .7vw .85vw;
-                    font-size: 1.1vw;
-                    font-weight: 300;
-                    transition: .2s ease-in-out;
-                }
+            .banner-cada-input-container input {
+                outline: none;
+                border: 2px solid rgb(0, 0, 0, .2);
+                border-radius: 5px;
+                padding: 1vw 1.85vw;
+                font-weight: 300;
+                font-size: 4.1vw;
+                transition: .2s ease-in-out;
+            }
 
                 .banner-cada-input-container input:focus {
                     border-color: #232323;
                 }
 
-        .banner-inputs-row2-container {
+    .banner-inputs-row2-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+        .banner-input-message-container {
             display: flex;
-            padding-bottom: 2%;
+            flex-direction: column;
+            width: 100%;
+            margin-bottom: 5.2vw;
         }
 
-            .banner-input-message-container {
-                display: flex;
-                flex-direction: column;
-                padding-right: 4%;
-                width: 50%;
+            .banner-input-message-container span {
+                font-weight: 400;
+                font-size: 4.25vw;
             }
 
-                .banner-input-message-container span {
-                    font-size: 1.25vw;
-                    font-weight: 400;
-                }
+            .banner-input-message-container textarea {
+                resize: none;
+                outline: none;
+                border: 2px solid rgb(0, 0, 0, .2);
+                border-radius: 5px;
+                padding: .7vw 1.85vw;
+                font-weight: 300;
+                font-size: 4.1vw;
+                transition: .2s ease-in-out;
+            }
 
-                .banner-input-message-container textarea {
-                    resize: none;
-                    outline: none;
-                    border: 2px solid rgb(0, 0, 0, .2);
-                    border-radius: 5px;
-                    padding: .7vw .85vw;
-                    font-size: 1.1vw;
-                    font-weight: 300;
-                    transition: .2s ease-in-out;
-                }
                 .banner-input-message-container textarea:focus {
                     border-color: #232323;
                 }
 
-            .banner-captcha {
-                width: 28%;
-                display: flex;
-                align-items: center;
-            }
-
-                .banner-captcha img{
-                    width: 100%;
-                }
-
-        .container-btn-banner {
-            display: flex;
-            padding-top: 2%;
+        .banner-captcha {
+            width: 84%;
+            margin-bottom: 18px;
         }
 
-            .btn-ver-productos {
-                font-size: 1.1vw;
+            .banner-captcha img{
+                width: 100%;
             }
 
-                .arrow_btn {
-                    margin-left: 1.5vw;
-                    width: 2.05vw;
-                }
 
-                
-/* empieza Media queries */
-
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-    /* empieza banner */
-
-    #banner {
-        padding: 21% 5% 25%;
-        min-height: unset;
+    .container-btn-banner {
+        display: flex;
+        padding-top: 2%;
     }
 
-        .banner-title-container {
-            padding-bottom: 3%;
-        }
-
-            .banner-title-container p{
-                font-size: 4.4vw;
-                margin-bottom: 5px;
-            }
-
-            .banner-title-container h3{
-                font-size: 5.32vw;
-                line-height: 135%;
-                margin-bottom: 2.5vw;
-
-            }
-
-        .banner-inputs-row1-container {
-            flex-direction: column;
-        }
-
-            .banner-cada-input-container {
-                width: 100%;
-                margin-bottom: 5.2vw;
-            }
-
-                .banner-cada-input-container span {
-                    font-size: 4.25vw;
-                }
-
-                .banner-cada-input-container input {
-                    padding: 1vw 1.85vw;
-                    font-size: 4.1vw;
-                }
-
-        .banner-inputs-row2-container {
-            flex-direction: column;
-        }
-
-            .banner-input-message-container {
-                width: 100%;
-                margin-bottom: 5.2vw;
-                padding-right: 0;
-            }
-
-                .banner-input-message-container span {
-                    font-size: 4.25vw;
-                }
-
-                .banner-input-message-container textarea {
-                    padding: .7vw 1.85vw;
-                    font-size: 4.1vw;
-                }
-
-            .banner-captcha {
-                width: 84%;
-                margin-bottom: 18px;
-            }
-
         .btn-ver-mas {
-            font-size: 4.5vw;
+            font-size: 4.2vw;
             padding: 1.5vw 4.4vw;
         }
 
@@ -199,6 +115,13 @@ body {
                 margin-left: 4.5vw;
                 width: 1.8vw;
             }
+
+                
+/* empieza Media queries */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -218,5 +141,86 @@ body {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-    
+    /* mover el bg al banner mejor */
+    body {
+        background-image: url('../images/contact/contact_bg.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+        /* empieza banner */
+        #banner {
+            padding: 10% 9% 5%;
+            min-height: 100vh;
+        }
+
+            .banner-title-container {
+                padding-bottom: 3%;
+            }
+
+                .banner-title-container p{
+                    font-size: 1.32vw;
+                }
+
+                .banner-title-container h3{
+                    font-size: 1.83vw;
+                }
+
+            .banner-inputs-row1-container {
+                
+                justify-content: space-between;
+                padding-bottom: 4%;
+            }
+
+                .banner-cada-input-container {
+                    width: 30%;
+                }
+
+                    .banner-cada-input-container span {
+                        font-size: 1.25vw;
+                    }
+
+                    .banner-cada-input-container input {
+                        padding: .7vw .85vw;
+                        font-size: 1.1vw;
+                    }
+
+            .banner-inputs-row2-container {
+                padding-bottom: 2%;
+            }
+
+                .banner-input-message-container {
+                    padding-right: 4%;
+                    width: 50%;
+                }
+
+                    .banner-input-message-container span {
+                        font-size: 1.25vw;
+                    }
+
+                    .banner-input-message-container textarea {
+                        padding: .7vw .85vw;
+                        font-size: 1.1vw;
+                    }
+                    
+
+                .banner-captcha {
+                    width: 28%;
+                    display: flex;
+                    align-items: center;
+                }
+
+            .container-btn-banner {
+                padding-top: 2%;
+            }
+
+                .btn-ver-mas {
+                    font-size: 1.1vw;
+                }
+
+                    .arrow_btn {
+                        margin-left: 1.5vw;
+                        width: 2.05vw;
+                    }
 }
