@@ -68,7 +68,7 @@ body {
     }
 
     header.sticky .navbar-logo img {
-        width: 11vw;
+        width: 12vw;
         transition: .2s ease-in-out;
     }
 
@@ -86,7 +86,7 @@ body {
             }
 
                 .navbar-logo img {
-                    width: 13.15vw;
+                    width: 14.2vw;
                     display: flex;
                     transition: .2s ease-in-out;
                 }
