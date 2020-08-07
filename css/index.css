@@ -18,7 +18,7 @@
     flex-direction: column;
     /* justify-content: flex-end; */
     align-items: center;
-    padding: 25% 5% 20%;
+    padding: 19vw 5% 20%;
 }
 
     .banner-productos-movil {
@@ -73,7 +73,7 @@
         display: none;
     }
 
-/* empieza Mas populares */
+/* empieza mas populares */
 #mas_populares {
     padding: 20% 5% 10%;
     position: relative;
@@ -168,6 +168,7 @@
                 padding: 1.25vw 3.4vw;
             }
 
+            /* el btn que use solo en la seccion de us */
             .btn-ver-mas {
                 font-size: 4.2vw;
                 padding: 1.5vw 4.4vw;
@@ -183,7 +184,7 @@
                     width: 1.8vw;
                 }
 
-/* empieza introduccion a Nosotros */
+/* empieza introduccion a nosotros */
 #us {
     padding: 15% 5% 25%;
     /* ya trae color de fondo el svg pero por si no cargara */
@@ -248,12 +249,146 @@
     
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-    
+    /* empieza banner */
+    #banner {
+        padding: 19vw 5% 20%;
+    }
+
+
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-    
+    /* empieza banner */
+    #banner {
+        padding: 11vw 5% 13%;
+    }
+
+        .banner-productos-movil {
+            width: 85%;
+        }
+
+        .banner-main-text h1 {
+            /* 7.79 */
+            font-size: 4vw;
+        }
+
+        .banner-main-text p {
+            padding-bottom: 2%;
+            font-size: 2.9vw;
+        }
+
+        .btn-ver-productos {
+            font-size: 2.5vw;
+            /* padding: 2.2vw 5.8vw; */
+            padding: 1.2vw 3.6vw;
+        }
+
+            .banner-arrow-btn {
+                margin-left: 5.9vw;
+                width: 1.5vw;
+            }
+
+    /* empieza mas populares */
+    #mas_populares {
+        padding: 11vw 5% 6%;
+    }
+
+        .mas-populares-drawn-lines-top-container {
+            width: 60%;
+        }
+
+        .mas-populares-title-container {
+            padding-bottom: 4%;
+        }
+
+            .mas-populares-title-container p {
+                font-size: 2.4vw;
+            }
+
+            .mas-populares-title-container h3 {
+                font-size: 4.6vw;
+            }
+
+        .p-popular-container {
+            width: 48%;
+            width: 23.5%;
+            padding-bottom: 3.5%;
+            margin-bottom: 13vw;
+        }
+
+            .p-popular-container p {
+                padding: 0 4%;
+                font-size: 2.1vw;
+            }
+
+            .btn-populares-container {
+                bottom: -2.5vw;
+            }
+
+                .btn-populares {
+                    font-size: 1.8vw;
+                    /* padding: 1.25vw 3.4vw; */
+                    padding: .85vw 2.2vw;
+                }
+
+                    .arrow_btn {
+                        margin-left: 2.5vw;
+                        width: 1vw;
+                    }
+
+    /* empieza introduccion a nosotros */
+    #us {
+        padding: 11vw 5% 10%;
+        flex-direction: row;
+    }
+
+        .us-left-part {
+            width: 60%;
+        }
+
+            .us-left-part p{
+                font-size: 1.8vw;
+            }
+
+            .us-left-part h3{
+                width: 75%;
+                font-size: 2.3vw;
+                padding: 3% 0;
+            }
+
+            .us-left-part img{
+                margin: unset;
+                width: 80%;
+            }
+
+        .us-right-part {
+            width: 40%;
+        }
+
+            .us-right-part-img-container  {
+                display: block;
+            }
+
+                .us-right-part-img-container img {
+                        width: 100%;
+                    }
+
+            .us-right-part-text p:nth-child(1) {
+                font-size: 1.6vw;
+                padding: 2% 0 2%;
+            }
+
+            .us-right-part-text p:nth-child(2) {
+                font-size: 1.6vw;
+                margin-bottom: 1.5vw;
+            }
+
+        .btn-ver-mas {
+            font-size: 1.9vw;
+            /* padding: 1.5vw 4.4vw; */
+            padding: .8vw 2.8vw;
+        }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */

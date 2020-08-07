@@ -68,7 +68,7 @@ body {
     }
 
     header.sticky .navbar-logo img {
-        width: 12.6vw;
+        width: 13vw;
         transition: .2s ease-in-out;
     }
 
@@ -196,9 +196,11 @@ body {
     .wa_btn_flotante {
         z-index: 1233;
         position: fixed;
-        width: 17%;
-        right: 14px;
-        bottom: 14px;
+        width: 15%;
+        /* right: 14px;
+        bottom: 14px; */
+        right: 3vw;
+        bottom: 3vw;
     }
 
 
@@ -259,51 +261,46 @@ body {
         background: #E1E1E1;
         min-height: 5.75vw;
         display: flex;
-        justify-content: space-between;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
         align-items: center;
-        flex-direction: column;
         padding: 5% 9.5%;
     }
 
-        .footer-redes-and-copyright-container {
+        .footer-otras-redes-container, .footer-otras-redes-container a {
             display: flex;
-            justify-content: space-evenly;
             align-items: center;
-            width: 100%;
         }
 
-            .footer-otras-redes-container, .footer-otras-redes-container a {
-                display: flex;
-                align-items: center;
+            .footer-text {
+                font-family: 'Open Sans', sans-serif;
+                font-weight: 400;
+                font-size: 3.4vw;
+            }
+    
+            .footer-redes-text{
+                display: none;
             }
 
-                .footer-text {
-                    font-family: 'Open Sans', sans-serif;
-                    font-weight: 400;
-                    font-size: 3.4vw;
-                }
-        
-                .footer-redes-text{
-                    display: none;
-                }
-
-                .footer-redes-fb-logo {
-                    width: 8.4vw;
-                }
-
-
-            .footer-copyright {
-                opacity: .75;
-                margin-left: 19px;
+            .footer-redes-fb-logo {
+                width: 8.4vw;
             }
+
+
+        .footer-copyright {
+            opacity: .75;
+            margin-left: 19px;
+        }
 
         .footer-movil-divisor {
+            display: flex ;
             width: 79vw;
             height: 2px;
             border-width: 0;
             background-color: #C4C4C4;
             margin: 4vw 0;
             opacity: .8;
+            flex-basis: 100%;
         }
 
         .developedby {
@@ -329,7 +326,10 @@ body {
         border: 2px solid #8CD258; 
         color: #fff;
         text-decoration: none;
-        border-radius: 35px;
+        /* border-radius: 35px; */
+        /* le subi a 100px porque a partir 
+        de los min 700px se pierde la redondez del btn */
+        border-radius: 100px;
         transition: .2s ease-in-out;
     }
 
@@ -354,12 +354,68 @@ body {
     
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-    
+    .navbar-logo img {
+        width: 11vw;
+    }
+
+    header.sticky .navbar-logo img {
+        width: 9vw;
+    }
+
+    .wa_btn_flotante {
+        width: 13%;
+    }
+
+    /* .burger div {
+        width: 29px;
+        height: 4px;
+        margin: 5px 0;
+    } */
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+    .navbar-logo img {
+        width: 9vw;
+    }
+
+    header.sticky .navbar-logo img {
+        width: 7vw;
+    }
+
+    .wa_btn_flotante {
+        width: 8%;
+    }
+
+    footer {
+        padding: 2% 9.5%;
+        justify-content: space-around;
+    }
+
+            .footer-text {
+                font-size: 1.5vw;
+            }
     
+            .footer-redes-text{
+                display: block;
+                padding-right: 1.3vw;
+            }
+
+            .footer-redes-fb-logo {
+                width: 3.5vw;
+            }
+
+        .footer-copyright {
+            margin-left: unset;
+        }
+
+        .footer-movil-divisor {
+            display: none;
+        }
+
+        .developedby {
+            width: unset;
+        }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
