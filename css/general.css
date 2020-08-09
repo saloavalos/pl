@@ -45,6 +45,7 @@ body {
 
     /* empieza header */
     header {
+        height: 9vh;
         width: 100%;
         position: fixed;
         padding: .5% 6%;
@@ -66,9 +67,10 @@ body {
         transition: .1s ease-in-out;
     }
 
-    /* cuando header tiene la clase sticky cambiar tamo de logo */
+    /* cuando header tiene la clase sticky cambiar tamaño de logo */
     header.sticky .navbar-logo img {
-        width: 13vw;
+        /* width: 13vw; */
+        width: 48px;
         transition: .2s ease-in-out;
     }
 
@@ -86,7 +88,10 @@ body {
             }
 
                 .navbar-logo img {
-                    width: 15vw;
+                    /* width: 15vw; */
+                    /* mejor pixeles para que no se desborde
+                    por su tamaña que va ampliandose */
+                    width: 58px;
                     display: flex;
                     transition: .2s ease-in-out;
                 }
@@ -354,33 +359,27 @@ body {
     
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-    .navbar-logo img {
-        width: 11vw;
-    }
+    /* .navbar-logo img {
+        width: 58px;
+    } */
 
-    header.sticky .navbar-logo img {
-        width: 9vw;
-    }
+    /* header.sticky .navbar-logo img {
+        width: 48px;
+    } */
 
     .wa_btn_flotante {
         width: 13%;
     }
-
-    /* .burger div {
-        width: 29px;
-        height: 4px;
-        margin: 5px 0;
-    } */
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
     .navbar-logo img {
-        width: 9vw;
+        width: 58px;
     }
 
     header.sticky .navbar-logo img {
-        width: 7vw;
+        width: 50px;
     }
 
     .wa_btn_flotante {

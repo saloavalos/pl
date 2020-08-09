@@ -451,13 +451,13 @@
                 position: absolute;
                 width: 16vw;
                 bottom: 0;
-                left: 22vw;
+                left: 19vw;
                 z-index: 1;
             }
             /* la de arriba a a izquierda */
             .banner-drawn-leaf-container img:nth-child(2) {
                 position: absolute;
-                width: 12vw;
+                width: 10vw;
                 top: 0;
                 right: 0;
                 z-index: 1;
