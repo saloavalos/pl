@@ -50,8 +50,7 @@ body {
         padding: .5% 6%;
         top: 0;
         z-index: 1234;
-        height: 9vh;
-        align-items: center;
+        /* align-items: center; */
         display: flex;
         transition: .6s ease-in-out;
     }
@@ -67,6 +66,7 @@ body {
         transition: .1s ease-in-out;
     }
 
+    /* cuando header tiene la clase sticky cambiar tamo de logo */
     header.sticky .navbar-logo img {
         width: 13vw;
         transition: .2s ease-in-out;
@@ -215,7 +215,7 @@ body {
         align-items: center;
         /* ocultarlo en pantallas muy pequeñas */
         display: none;
-
+        z-index: 2;
     }
 
         .scrollanimation {
@@ -420,6 +420,103 @@ body {
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+    header {
+        height: unset;
+    }
+
+    .navbar-logo img {
+        width: 7vw;
+    }
+
+    header.sticky .navbar-logo img {
+        width: 5vw;
+    }
+
+    .wa_btn_flotante {
+        display: none;
+    }
+
+    .navbar-sections {
+        width: unset;
+        background-color: unset;
+        height: unset;
+        flex-direction: row;
+        position: static;
+        transform: translateX(0%);
+    }
+
+        .nav-item {
+            opacity: 1;
+            padding: 0 1.4vw;
+        }
+
+            .nav-link {
+                font-size: 1.25vw;
+            }
+
+        .nav-item-wa {
+            display: block;
+            list-style: none;
+            /* si uso % en vez de vw como en los <li>
+            anteriores, me carga mal el tamaño del boton.
+            de manera random  */
+            /* padding: 0 0 0 6%; */
+            padding: 0 0 0 4.8vw;
+        }
+
+            .btn-wa {
+                font-size: 1.25vw;
+            }
+
+                .wa_btn {
+                    display: flex;
+                    padding-right: 10%;
+                    width: 2.7vw;
+                }
+
+    .burger {
+        display: none;
+    }
+
+    .scrollanimation-container {
+        /* que aparezca, estaba oculto */
+        display: flex;
+    }
+
+    /* empieza ver mas animation */
+    .scrollanimation-container {
+        left: 50%;
+        bottom: -4vw;
+    }
+
+        .scrollanimation {
+            width: 2vw;
+            height: 3.3vw;
+        }
+
+            .scrollanimation::before {
+                width: .45vw;
+                height: .45vw;
+                top: .83vw;
+                border-radius: 50%;
+            }
+
+            @keyframes mouse {
+                from {
+                    opacity: 1;
+                    top: .83vw;
+                }
+                to {
+                    opacity: 0;
+                    top: 1.82vw;
+                }
+            }
+
+        .scrollanimation-container span {
+            font-size: .95vw;
+            padding-top: .9vw;
+        }
+
     
 }
 
@@ -445,13 +542,13 @@ body {
                 
             } */
 
-                .nav-item {
+                /* .nav-item {
                     padding: 0 1.4vw;
                 }
 
                     .nav-link {
                         font-size: 1.25vw;
-                    }
+                    } */
 
                         /* .nav-link::after {
                         }
@@ -479,9 +576,7 @@ body {
                             width: 2.7vw;
                         }
 
-            .burger {
-                display: none;
-            }
+            
 
     /* empieza ver mas animation */
     .scrollanimation-container {
