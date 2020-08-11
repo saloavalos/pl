@@ -6,7 +6,7 @@
 
 /* empieza producto-seleccionado */
 #producto-seleccionado {
-    padding: 21% 5% 25%;
+    padding: 80px 5% 25%;
     /* background-image: none; */
     background-image: url('../images/bg_particles.svg');
     background-position: center;
@@ -37,9 +37,9 @@
 
         .p-seleccionado-expand-icon {
             position: absolute;
-            right: 22px;
-            bottom: 22px;
-            width: 7%;
+            right: 14px;
+            bottom: 14px;
+            width: 24px;
             opacity: .5;
             cursor: pointer;
             transition: .2s ease-in-out;
@@ -105,13 +105,15 @@
 
         .p-seleccionado-image-pop-up {
             transition: .3s ease all;
-            transform: scale(0.7);
+            /* transform: scale(0.7); */
+            transform: scale(0.47);
             opacity: 0;
             margin-top: 3%;
         }
 
         .p-seleccionado-image-pop-up.popup-activated {
-            transform: scale(1);
+            /* transform: scale(1); */
+            transform: scale(.77);
             opacity: 1;
         }
 
@@ -123,7 +125,7 @@
             }
 
                 .p-seleccionado-image-pop-up-cerrar img{
-                    width: 3vw;
+                    width: 42px;
                 }
 
             /* .p-seleccionado-image-pop-up-previous {
@@ -226,155 +228,165 @@
                 
 /* empieza Media queries */
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-
-}
-
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-    
+    #producto-seleccionado {
+        padding: 85px 5% 10%;
+    }
+
+    .p-seleccionado-main-image {
+        margin: 5% 0;
+        width: 210px;
+    }
+
+    /* popup */
+    .p-seleccionado-image-pop-up {
+        transform: scale(0.57);
+        margin-top: 1%;
+    }
+
+    .p-seleccionado-image-pop-up.popup-activated {
+        transform: scale(.87);
+    }
+
+            .p-seleccionado-image-pop-up-cerrar img{
+                width: 42px;
+            }
+
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-    
+    #producto-seleccionado {
+        flex-direction: row;
+        min-height: 100vh;
+        padding: 85px 5% 5%;
+    }
+
+    .p-seleccionado-name-container, .detalles-beneficios, .detalles-ingredientes, .detalles-uso, .detalles-extras-container, .btn-populares-container {
+        order: unset;
+    }
+
+    .p-seleccionado-images-container {
+        width: 40%;
+    }
+
+            .p-seleccionado-main-image {
+                width: 270px;
+            }
+
+            .p-seleccionado-expand-icon {
+                right: 14px;
+                bottom: 14px;
+                width: 24px;
+            }
+
+
+    /* parte derecha con descripcion del producto */
+    .p-seleccionado-info-container {
+        width: 54%;
+    }
+
+        .p-seleccionado-name-container {
+            /* font-size: 3.7vw; */
+            font-size: 30px;
+            padding: 0 0 3%;
+        }
+
+        .p-seleccionado-detalles-container {
+            padding-bottom: 3%;
+        }
+
+            .p-seleccionado-detalles-container.extras:nth-child(2){
+                width: 52%;
+            }
+
+            .p-seleccionado-detalles-container span{
+                /* font-size: 1.65vw; */
+                font-size: 14px;
+            }
+
+            .p-seleccionado-detalles-container p{
+                /* font-size: 1.45vw; */
+                font-size: 13px;
+            }
+
+        .btn-populares-container {
+            padding-top: 2%;
+            justify-content: left;
+            margin: unset;
+        }
+
+            .btn-p-selected {
+                /* font-size: 1.4vw; */
+                font-size: 14px;
+                /* padding: 1vw 2.2vw; */
+                padding: 9px 20px;
+            }
+                .p-selected-arrow-btn {
+                    margin-left: 4.2vw;
+                    width: 8px;
+                }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-    
+    #producto-seleccionado {
+        padding: 99px 5% 5%;
+    }
+
+        .p-seleccionado-name-container {
+            font-size: 34px;
+        }
+
+        .p-seleccionado-detalles-container span{
+            font-size: 17px;
+        }
+
+        .p-seleccionado-detalles-container p{
+            font-size: 16px;
+        }
+
+        .btn-p-selected {
+            font-size: 15px;
+        }
+
+        
+
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-    /* empieza producto-seleccionado */
     #producto-seleccionado {
-        background-image: url('../images/bg_productos.png');
-        background-repeat: repeat-y;
-        background-size: contain;
-        padding: 10% 9% 5%;
+        padding: 115px 5% 5%;
     }
-
-        .p-seleccionado-images-container {
-            width: 40%;
+/* 
+        .p-seleccionado-name-container {
+            font-size: 32px;
         }
 
-            /* .p-seleccionado-main-image-container {
-            } */
-
-                .p-seleccionado-main-image {
-                    width: 270px;
-                }
-
-                .p-seleccionado-expand-icon {
-                    right: 22px;
-                    bottom: 22px;
-                    width: 7%;
-                }
-
-            .p-seleccionado-sub-image-conatiner {
-                width: 60%;
-            }
-
-                .p-seleccionado-sub-individual-image-conatiner {
-                    margin-right: 1.5%;
-                    width: 30%;
-                }
-
-                    .p-seleccionado-sub-image {
-                        width: 100%;
-                    }
-
-            /* popup */
-            .overlay-popup-img {
-                top: 0;
-                bottom: 0;
-                left: 0;
-                right: 0;
-            }
-
-                .p-seleccionado-image-pop-up {
-                    transform: scale(0.7);
-                    opacity: 0;
-                    margin-top: 3%;
-                }
-
-                .p-seleccionado-image-pop-up.popup-activated {
-                    transform: scale(1);
-                    opacity: 1;
-                }
-
-                    .p-seleccionado-image-pop-up-cerrar {
-                        top: -5%;
-                        right: -9%;
-                    }
-
-                        .p-seleccionado-image-pop-up-cerrar img{
-                            width: 3vw;
-                        }
-
-                    /* .p-seleccionado-image-pop-up-previous {
-                        
-                    } */
-
-                    .p-seleccionado-image-pop-up-main-img {
-                        height: 80%;
-                        min-width: 50%;
-                        padding: 1% 0;
-                    }
-
-                        .p-seleccionado-image-pop-up-main-img img{
-                            height: 100%;
-                        }
-
-                    /* .p-seleccionado-image-pop-up-next {
-                        
-                    } */
-
-            /* popup animaciones */
-            .popup.active {	
-                transform: scale(1); 
-                opacity: 1; 
-            }
-
-        /* parte derecha con descripcion del producto */
-        .p-seleccionado-info-container {
-            width: 54%;
+        .p-seleccionado-detalles-container span{
+            font-size: 15px;
         }
 
-            .p-seleccionado-name-container {
-                font-size: 2.7vw;
-                padding-bottom: 4%;
+        .p-seleccionado-detalles-container p{
+            font-size: 14px;
+        } */
+
+        .btn-p-selected {
+            font-size: 16px;
+        }
+
+        /* popup */
+        .p-seleccionado-image-pop-up {
+            transform: scale(0.65);
+        }
+
+        .p-seleccionado-image-pop-up.popup-activated {
+            transform: scale(.95);
+        }
+
+            .p-seleccionado-image-pop-up-cerrar img{
+                width: 42px;
             }
-
-            .p-seleccionado-detalles-container {
-                padding-bottom: 3%;
-            }
-
-                .p-seleccionado-detalles-container.extras {
-                    width: 45%;
-                }
-
-                .p-seleccionado-detalles-container span{
-                    font-size: 1.24vw;
-                }
-
-                .p-seleccionado-detalles-container p{
-                    font-size: 1.1vw;
-                }
-
-            .btn-populares-container {
-                padding-top: 2%;
-            }
-
-                .btn-p-selected {
-                    font-size: 3.9vw;
-                    padding: 2.8vw 6.2vw;
-                }
-                    .arrow_btn {
-                        margin-left: 1.5vw;
-                        width: 2.05vw;
-                    }
-
 }

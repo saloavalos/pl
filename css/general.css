@@ -294,7 +294,7 @@ body {
 
         .footer-copyright {
             opacity: .75;
-            margin-left: 19px;
+            /* margin-left: 19px; */
         }
 
         .footer-movil-divisor {
@@ -424,7 +424,7 @@ body {
     }
 
     .navbar-logo img {
-        width: 7vw;
+        width: 65px;
     }
 
     header.sticky .navbar-logo img {
