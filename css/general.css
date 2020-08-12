@@ -201,7 +201,7 @@ body {
     .wa_btn_flotante {
         z-index: 1233;
         position: fixed;
-        width: 16%;
+        width: 65px;
         /* right: 14px;
         bottom: 14px; */
         right: 3vw;
@@ -367,9 +367,6 @@ body {
         width: 48px;
     } */
 
-    .wa_btn_flotante {
-        width: 13%;
-    }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -383,7 +380,7 @@ body {
     }
 
     .wa_btn_flotante {
-        width: 8%;
+        width: 68px;
     }
 
     footer {

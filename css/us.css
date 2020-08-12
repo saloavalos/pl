@@ -6,7 +6,8 @@
 
 /* empieza banner */
 #banner {
-    padding: 21% 5% 10%;
+    /* padding: 21% 5% 10%; */
+    padding: 80px 5% 25%;
 }
 
     .banner-title-container {
@@ -75,19 +76,23 @@
         background-color: #fff;
         text-align: center;
         width: 100%;
-        height: 29vh;
+        height: 42vw;
         display: flex;
         align-items: center;
         flex-direction: column;
         justify-content: center;
-        padding: 9.5%;
+        padding: 0 9.5% 0;
         margin-bottom: 10vw;
     }
 
-        .objetivos-cada-caja-container img {
+        .objetivos-cada-caja-img-container {
             width: 25%;
-            margin-bottom: 10%;
         }
+
+            .objetivos-cada-caja-img-container img {
+                width: 100%;
+                padding: 13%;
+            }
 
         .objetivos-cada-caja-container span {
             font-weight: 400;
@@ -121,112 +126,96 @@
 
 /* empieza Media queries */
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-
-}
-
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-    
+    /* empieza banner */
+    #banner {
+        padding: 85px 5% 7%;
+    }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-    
-}
+    /* .banner-title-container {
+        padding-bottom: 2%;
+    } */
 
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-    
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-    /* empieza banner */
-    #banner {
-        padding: 10% 9% 10%;
-        background-image: url('../images/us/us_bg_banner.png');
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: relative;
-    }
-
-        .banner-title-container {
-            padding-bottom: 2%;
+        .banner-title-container p{
+            font-size: 2.1vw;
         }
 
-            .banner-title-container p{
-                font-size: 1.4vw;
-            }
+        .banner-title-container h3{
+            font-size: 3.6vw;
+        }
 
-            .banner-title-container h3{
-                font-size: 2.7vw;
-            }
 
-        /* .banner-img-and-desc-container {
-        } */
+    .banner-img-and-desc-container {
+        flex-direction: row;
+    }
 
-            .banner-img-and-desc-container img {
-                width: 40%;
-            }
+        .banner-img-and-desc-container img {
+            width: 40%;
+            margin-bottom: unset;
+        }
 
         .banner-img-and-desc-container p {
             width: 55%;
-            font-size: 1.61vw;
+            font-size: 2.1vw;
         }
 
     /* empieza objetivos */
     #objetivos {
-        padding: 10% 9%;
-        background-image: url('../images/us/us_bg_objetivos.png');
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
+        padding: 5% 7% 7%;
     }
 
-        .objetivos-title-container {
+        /* .objetivos-title-container {
             padding-bottom: 5%;
-        }
+        } */
 
             .objetivos-title-container p{
-                font-size: 1.4vw;
+                font-size: 2.1vw;
             }
 
             .objetivos-title-container h3{
-                font-size: 2.7vw;
+                font-size: 3.6vw;
             }
 
         .objetivos-cajas-container {
             justify-content: space-between;
-            flex-direction: unset;
+            flex-direction: row;
         }
-
+    
             .objetivos-cada-caja-container {
-                width: 28%;
-                padding: 2.5%;
+                width: 26vw;
+                height: 17.5vw;
+                padding: 0 2.5% 0;
+                margin-bottom: unset;
             }
-
-                .objetivos-cada-caja-container img {
-                    width: 25%;
-                    /* margin-bottom: 10%; */
+    
+                .objetivos-cada-caja-img-container {
+                    
                 }
-
+    
                 .objetivos-cada-caja-container span {
-                    font-size: 1.28vw;
+                    font-size: 1.7vw;
                 }
 
-    /* empieza info-extra */
+    /* empieza extras */
     #info-extra {
-        padding: 10% 9%;
+        padding: 6% 7% 10%;
+        flex-direction: row;
         justify-content: space-between;
         align-items: center;
     }
 
         #info-extra span {
-            width: 70%;
-            font-size: 1.61vw;
+            width: 45%;
+            margin-bottom: unset;
+            font-size: 2.1vw;   
+        }
+
+        .info-extra-img-movil {
+            display: none;
         }
 
         .info-extra-img {
@@ -234,7 +223,83 @@
             width: 55%;
         }
 
-        .info-extra-img-movil {
-            display: none;
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    #banner {
+        min-height: 100vh;
+        padding: 108px 5% 10%;
+
+        background-image: url('../images/us/us_bg_banner.png');
+        background-position: right;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+
+        .banner-title-container p{
+            font-size: 1.4vw;
         }
+
+        .banner-title-container h3{
+            font-size: 2.7vw;
+        }
+
+        .banner-img-and-desc-container p {
+            font-size: 1.9vw;
+        }
+
+    /* empieza objetivos */
+    #objetivos {
+        padding: 10% 7% 10%;
+        background-image: url('../images/us/us_bg_objetivos.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+        .objetivos-title-container p{
+            font-size: 1.4vw;
+        }
+
+        .objetivos-title-container h3{
+            font-size: 2.7vw;
+        }
+
+        .objetivos-cada-caja-container {
+            height: 16vw;
+        }
+
+            .objetivos-cada-caja-container span {
+                font-size: 1.5vw;
+            }
+
+    /* empieza extra */
+    #info-extra span {
+        font-size: 1.9vw;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    /* empieza banner */
+
+        .banner-img-and-desc-container p {
+            font-size: 1.7vw;
+        }
+
+    /* empieza objetivos */
+    #objetivos {
+        /* un poco mas estrecho para quese vean
+        los dibujos en los bordes */
+        padding: 10% 9% 10%;
+    }
+
+        .objetivos-title-container {
+            padding-bottom: 5%;
+        }
+            .objetivos-cada-caja-container {
+                width: 25vw;
+            }
 }
