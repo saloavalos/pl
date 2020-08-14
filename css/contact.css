@@ -6,7 +6,7 @@
 
 /* empieza banner */
 #banner {
-    padding: 21% 5% 25%;
+    padding: 80px 5% 25%;
 }
 
     .banner-title-container {
@@ -119,108 +119,190 @@
                 
 /* empieza Media queries */
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-
-}
-
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-    
+    /* empieza banner */
+    #banner {
+        padding: 85px 5% 7%;
+    }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-    
+    .banner-title-container {
+        padding-bottom: 1%;
+    }
+
+        .banner-title-container p{
+            font-size: 2.1vw;
+        }
+
+        .banner-title-container h3{
+            font-size: 3.6vw;
+        }
+
+    .banner-inputs-row1-container {
+        flex-direction: row;
+        justify-content: space-between;
+        /* padding-bottom: 4%; */
+    }
+
+        .banner-cada-input-container {
+            width: 31%;
+        }
+
+        .banner-cada-input-container {
+            margin-bottom: 3.5vw;
+        }
+
+            .banner-cada-input-container span {
+                font-size: 1.48vw;
+            }
+
+            .banner-cada-input-container input {
+                padding: .7vw .85vw;
+                font-size: 1.5vw;
+            }
+
+    .banner-inputs-row2-container {
+        flex-direction: row;
+        padding-bottom: 2%;
+    }
+
+        .banner-input-message-container {
+            margin-right: 4%;
+            margin-bottom: unset;
+            width: 50%;
+        }
+
+            .banner-input-message-container span {
+                font-size: 1.48vw;
+            }
+
+            .banner-input-message-container textarea {
+                padding: .7vw .85vw;
+                font-size: 1.5vw;
+                height: 13vw;
+            }
+
+        .banner-captcha {
+            width: 28%;
+            display: flex;
+            align-items: center;
+            margin-bottom: unset
+        }
+
+    .container-btn-banner {
+        padding-top: 2%;
+    }
+
+        .btn-ver-mas {
+            font-size: 1.9vw;
+            padding: .7vw 2.8vw;
+        }
+
+            .arrow_btn {
+                margin-left: 2.5vw;
+                width: .95vw;
+            }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-    
-}
+    /* empieza banner */
+    #banner {
+        padding: 108px 5% 7%;
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-    /* mover el bg al banner mejor */
-    body {
         background-image: url('../images/contact/contact_bg.svg');
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
     }
 
-        /* empieza banner */
-        #banner {
-            padding: 10% 9% 5%;
-            min-height: 100vh;
+        /* .banner-title-container {
+            padding-bottom: 1%;
+        } */
+
+            .banner-title-container p{
+                font-size: 1.4vw;
+            }
+
+            .banner-title-container h3{
+                font-size: 2.7vw;
+            }
+
+            .banner-cada-input-container span {
+                font-size: 1.3vw;
+            }
+
+            .banner-cada-input-container input {
+                padding: .7vw .85vw;
+                font-size: 1.3vw;
+            }
+
+            .banner-input-message-container {
+                margin-right: 4%;
+                margin-bottom: unset;
+                width: 50%;
+            }
+    
+                .banner-input-message-container span {
+                    font-size: 1.3vw;
+                }
+    
+                .banner-input-message-container textarea {
+                    padding: .7vw .85vw;
+                    font-size: 1.3vw;
+                }
+    
+            .banner-captcha {
+                width: 31%;
+            }
+
+        .container-btn-banner {
+            padding-top: 1%;
         }
 
-            .banner-title-container {
-                padding-bottom: 3%;
+            .btn-ver-mas {
+                font-size: 1.6vw;
+                padding: .75vw 2.5vw;
             }
+}
 
-                .banner-title-container p{
-                    font-size: 1.32vw;
-                }
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .banner-title-container p{
+        font-size: 1.32vw;
+    }
 
-                .banner-title-container h3{
-                    font-size: 1.83vw;
-                }
+    .banner-title-container h3{
+        font-size: 1.83vw;
+    }
 
-            .banner-inputs-row1-container {
-                
-                justify-content: space-between;
-                padding-bottom: 4%;
-            }
+    .banner-cada-input-container {
+        width: 30%;
+    }
 
-                .banner-cada-input-container {
-                    width: 30%;
-                }
+        .banner-cada-input-container span {
+            font-size: 1.25vw;
+        }
 
-                    .banner-cada-input-container span {
-                        font-size: 1.25vw;
-                    }
+        .banner-cada-input-container input {
+            padding: .6vw .85vw;
+            font-size: 1.1vw;
+        }
 
-                    .banner-cada-input-container input {
-                        padding: .7vw .85vw;
-                        font-size: 1.1vw;
-                    }
+        .banner-input-message-container span {
+            font-size: 1.25vw;
+        }
 
-            .banner-inputs-row2-container {
-                padding-bottom: 2%;
-            }
+        .banner-input-message-container textarea {
+            padding: .6vw .85vw;
+            font-size: 1.1vw;
+            height: 11vw;
+        }
 
-                .banner-input-message-container {
-                    padding-right: 4%;
-                    width: 50%;
-                }
-
-                    .banner-input-message-container span {
-                        font-size: 1.25vw;
-                    }
-
-                    .banner-input-message-container textarea {
-                        padding: .7vw .85vw;
-                        font-size: 1.1vw;
-                    }
-                    
-
-                .banner-captcha {
-                    width: 28%;
-                    display: flex;
-                    align-items: center;
-                }
-
-            .container-btn-banner {
-                padding-top: 2%;
-            }
-
-                .btn-ver-mas {
-                    font-size: 1.1vw;
-                }
-
-                    .arrow_btn {
-                        margin-left: 1.5vw;
-                        width: 2.05vw;
-                    }
+    .banner-captcha {
+        width: 27%;
+    }
 }
