@@ -96,11 +96,6 @@
             margin-bottom: 18px;
         }
 
-            .banner-captcha img{
-                width: 100%;
-            }
-
-
     .container-btn-banner {
         display: flex;
         padding-top: 2%;
@@ -264,8 +259,10 @@
         }
 
             .btn-ver-mas {
-                font-size: 1.6vw;
-                padding: .75vw 2.5vw;
+                font-size: 1.4vw;
+                padding: .55vw 1.5vw;
+                /* font-size: 1.9vw;
+                padding: .7vw 2.8vw; */
             }
 }
 

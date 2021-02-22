@@ -319,6 +319,7 @@ body {
     btn-general VALUES
     ************************/
     .btn-general {
+        cursor: pointer;
         display: flex;
         align-items: center;
         font-family: 'Open Sans', sans-serif;

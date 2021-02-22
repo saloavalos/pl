@@ -10,6 +10,8 @@
     
         <link rel="stylesheet" href="css/general.css" type="text/css">
         <link rel="stylesheet" href="css/contact.css" type="text/css">
+
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     </head>
 <body>
     <header>
@@ -53,34 +55,32 @@
             <h3>llena el formulario o manda un mensaje de whatsapp</h3>
         </div>
 
-        <form action="" method="post">
+        <form action="" method="post" autocomplete="off" name="google-sheet">
             <div class="banner-inputs-row1-container">
                 <div class="banner-cada-input-container">
                     <span>Nombre</span>
-                    <input type="text" name="" id="" required>
+                    <input type="text" name="name" id="" required>
                 </div>
                 <div class="banner-cada-input-container">
                     <span>Correo electronico</span>
-                    <input type="email" name="" id="" required>
+                    <input type="email" name="email" id="" required>
                 </div>
                 <div class="banner-cada-input-container">
                     <span>Asunto</span>
-                    <input type="text" name="" id="">
+                    <input type="text" name="subject" id="" required>
                 </div>
             </div>
 
             <div class="banner-inputs-row2-container">
                 <div class="banner-input-message-container">
                     <span>Mensaje</span>
-                    <textarea name="" id="" cols="60" rows="5" required></textarea>
+                    <textarea name="message" id="" cols="60" rows="5" required></textarea>
                 </div>
-                <div class="banner-captcha">
-                    <img src="images/captcha.jpg" alt="">
-                </div>
+                <div class="g-recaptcha banner-captcha" data-sitekey="6LeFtWEaAAAAAMJZCJVIjGayv_iJyoHmo1tnIHuh"></div>
             </div>
 
             <div class="container-btn-banner">
-                <a class="btn-general btn-ver-mas" href="">Enviar<img class="arrow_btn" src="images/arrow_btn.svg" alt="Ver más"></a>
+                <button type="submit" class="btn-general btn-ver-mas">Enviar<img class="arrow_btn" src="images/arrow_btn.svg" alt="Ver más"></button>
             </div>
             
         </form>
@@ -102,5 +102,18 @@
 
 
     <script src="js/general.js"></script>
+
+    <!-- Usin google sheets -->
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzJnADkTLXSucWa-ptiH9UCrJkoRs28doTa0xgjL_RTIK-aOD7cefyL/exec'
+        const form = document.forms['google-sheet']
+          
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => alert("Gracias por contactarnos..! En breve nos pondremos en contacto..."))
+            .catch(error => console.error('Error!', error.message))
+        })
+    </script>
 </body>
 </html>
