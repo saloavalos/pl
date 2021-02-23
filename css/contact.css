@@ -6,6 +6,7 @@
 
 /* empieza banner */
 #banner {
+    min-height: 100vh;
     padding: 80px 5% 25%;
 }
 
@@ -58,6 +59,19 @@
                 .banner-cada-input-container input:focus {
                     border-color: #232323;
                 }
+            .input-alert {
+                padding-top: 4px;
+                font-size: 4.25vw;
+                color: #e74c3c;
+            }
+
+            .banner-captcha-container {
+                flex-direction: column;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
 
     .banner-inputs-row2-container {
         display: flex;
@@ -92,7 +106,6 @@
                 }
 
         .banner-captcha {
-            width: 84%;
             margin-bottom: 18px;
         }
 
@@ -147,7 +160,7 @@
         }
 
         .banner-cada-input-container {
-            margin-bottom: 3.5vw;
+            margin-bottom: 2.5vw;
         }
 
             .banner-cada-input-container span {
@@ -158,10 +171,13 @@
                 padding: .7vw .85vw;
                 font-size: 1.5vw;
             }
+            .input-alert {
+                font-size: 1.3vw;
+            }
 
     .banner-inputs-row2-container {
         flex-direction: row;
-        padding-bottom: 2%;
+        padding-bottom: 1%;
     }
 
         .banner-input-message-container {
@@ -181,7 +197,6 @@
             }
 
         .banner-captcha {
-            width: 28%;
             display: flex;
             align-items: center;
             margin-bottom: unset
@@ -235,6 +250,10 @@
                 font-size: 1.3vw;
             }
 
+            .input-alert {
+                font-size: 1.1vw;
+            }
+
             .banner-input-message-container {
                 margin-right: 4%;
                 margin-bottom: unset;
@@ -250,10 +269,6 @@
                     font-size: 1.3vw;
                 }
     
-            .banner-captcha {
-                width: 31%;
-            }
-
         .container-btn-banner {
             padding-top: 1%;
         }
@@ -298,8 +313,4 @@
             font-size: 1.1vw;
             height: 11vw;
         }
-
-    .banner-captcha {
-        width: 27%;
-    }
 }

@@ -320,6 +320,7 @@ body {
     ************************/
     .btn-general {
         cursor: pointer;
+        outline: none;
         display: flex;
         align-items: center;
         font-family: 'Open Sans', sans-serif;

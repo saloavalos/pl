@@ -59,24 +59,31 @@
             <div class="banner-inputs-row1-container">
                 <div class="banner-cada-input-container">
                     <span>Nombre</span>
-                    <input type="text" name="name" id="" required>
+                    <input type="text" name="Name" id="name">
+                    <span class="input-alert" id="name-check"></span>
                 </div>
                 <div class="banner-cada-input-container">
                     <span>Correo electronico</span>
-                    <input type="email" name="email" id="" required>
+                    <input type="email" name="Email" id="email">
+                    <span class="input-alert" id="email-check"></span>
                 </div>
                 <div class="banner-cada-input-container">
                     <span>Asunto</span>
-                    <input type="text" name="subject" id="" required>
+                    <input type="text" name="Subject" id="subject">
+                    <span class="input-alert" id="subject-check"></span>
                 </div>
             </div>
 
             <div class="banner-inputs-row2-container">
                 <div class="banner-input-message-container">
                     <span>Mensaje</span>
-                    <textarea name="message" id="" cols="60" rows="5" required></textarea>
+                    <textarea name="Message" id="message" cols="60" rows="5"></textarea>
+                    <span class="input-alert" id="message-check"></span>
                 </div>
-                <div class="g-recaptcha banner-captcha" data-sitekey="6LeFtWEaAAAAAMJZCJVIjGayv_iJyoHmo1tnIHuh"></div>
+                <div class="banner-captcha-container">
+                    <div class="g-recaptcha banner-captcha" data-sitekey="6LeFtWEaAAAAAMJZCJVIjGayv_iJyoHmo1tnIHuh" data-callback="recaptcha_callback"></div>
+                    <span class="input-alert" id="captcha-check"></span>
+                </div>
             </div>
 
             <div class="container-btn-banner">
@@ -103,17 +110,102 @@
 
     <script src="js/general.js"></script>
 
-    <!-- Usin google sheets -->
     <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbzJnADkTLXSucWa-ptiH9UCrJkoRs28doTa0xgjL_RTIK-aOD7cefyL/exec'
-        const form = document.forms['google-sheet']
+        var isNameValid = false;
+        var isEmailValid = false;
+        var isSubjectValid = false;
+        var isMessageValid = false;
+        var isCaptchaValid = false;
+
+        var name;
+        var email;
+        var subject;
+        var message;
+
+        // If this function is called it means that the reCAPTCHA was checked
+        function recaptcha_callback() {
+            isCaptchaValid = true
+        }
+
+        // Usin google sheets as DB
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzJnADkTLXSucWa-ptiH9UCrJkoRs28doTa0xgjL_RTIK-aOD7cefyL/exec';
+        const form = document.forms['google-sheet'];
           
         form.addEventListener('submit', e => {
-            e.preventDefault()
-            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => alert("Gracias por contactarnos..! En breve nos pondremos en contacto..."))
-            .catch(error => console.error('Error!', error.message))
-        })
+            // Prevent the form from redirecting or reloading the page. since that does by default
+            e.preventDefault();
+
+            // Get all values from inputs
+            // name = document.getElementById("name").value;
+            name = document.forms["google-sheet"]["Name"].value;
+            email = document.forms["google-sheet"]["Email"].value;
+            subject = document.forms["google-sheet"]["Subject"].value;
+            message = document.forms["google-sheet"]["Message"].value;
+
+            // Hooks for spans of alerts
+            var nameCheck = document.getElementById("name-check");
+            var emailCheck = document.getElementById("email-check");
+            var subjectCheck = document.getElementById("subject-check");
+            var messageCheck = document.getElementById("message-check");
+            var captchaCheck = document.getElementById("captcha-check");
+
+            // Validate inputs 
+            var patternName = /^[a-zA-Z]+ [a-zA-Z]+$/;
+
+            if (name == "") {
+                isNameValid = false;
+                nameCheck.innerHTML = "*Campo vacio";
+            } else if(!patternName.test(name)) {
+                isNameValid = false;
+                nameCheck.innerHTML = "Nombre invalido, utilice Nombre y Apellido";
+            } else {
+                isNameValid = true;
+                nameCheck.innerHTML = "";
+            }
+
+            var patternEmail = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+            if (email == "") {
+                isEmailValid = false;
+                emailCheck.innerHTML = "*Campo vacio";
+            } else if (!email.test(patternEmail)) {
+                isEmailValid = false;
+                emailCheck.innerHTML = "Email invalido";
+            } else {
+                isEmailValid = true;
+                emailCheck.innerHTML = "";
+            }
+
+            if (subject == "") {
+                isSubjectValid = false;
+                subjectCheck.innerHTML = "*Campo vacio";
+            } else {
+                isSubjectValid = true;
+                subjectCheck.innerHTML = "";
+            }
+
+            if (message == "") {
+                isMessagetValid = false;
+                messageCheck.innerHTML = "*Campo vacio";
+            } else {
+                isMessageValid = true;
+                messageCheck.innerHTML = "";
+            }
+
+            if (!isCaptchaValid) {
+                captchaCheck.innerHTML = "Es necesario pasar el CAPTCHA";
+            } else {
+                captchaCheck.innerHTML = "";
+            }
+            
+            // If all inputs are well filled
+            if (isNameValid && isEmailValid && isSubjectValid && isMessageValid && isCaptchaValid) {
+                fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert("Gracias por contactarnos..! En breve nos pondremos en contacto..."))
+                .catch(error => console.error('Error!', error.message));
+            } else {
+                alert("Es necesario llenar todos los campos");
+            }
+        });
     </script>
 </body>
 </html>
