@@ -205,7 +205,8 @@
                     console('Gracias por contactarnos..! En breve nos pondremos en contacto...'),
 
                     // Clear all inputs
-                    document.getElementById("myForm").reset()
+                    document.getElementById("myForm").reset(),
+                    grecaptcha.reset()
                 )
                 .catch(error => console.error('Error!', error.message));
             } else {
