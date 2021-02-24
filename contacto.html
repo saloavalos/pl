@@ -55,7 +55,7 @@
             <h3>llena el formulario o manda un mensaje de whatsapp</h3>
         </div>
 
-        <form action="" method="post" autocomplete="off" name="google-sheet">
+        <form action="" method="post" autocomplete="off" name="google-sheet" id="myForm">
             <div class="banner-inputs-row1-container">
                 <div class="banner-cada-input-container">
                     <span class="banner-input-title">Nombre</span>
@@ -202,7 +202,10 @@
                 fetch(scriptURL, { method: 'POST', body: new FormData(form)})
                 .then(response => 
                     // alert("Gracias por contactarnos..! En breve nos pondremos en contacto...")
-                    console.error('Gracias por contactarnos..! En breve nos pondremos en contacto...')
+                    console('Gracias por contactarnos..! En breve nos pondremos en contacto...'),
+
+                    // Clear all inputs
+                    document.getElementById("myForm").reset()
                 )
                 .catch(error => console.error('Error!', error.message));
             } else {
