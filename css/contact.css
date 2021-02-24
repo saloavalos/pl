@@ -41,7 +41,7 @@
             margin-bottom: 5.2vw;
         }
 
-            .banner-cada-input-container span {
+            .banner-input-title {
                 font-weight: 400;
                 font-size: 4.25vw;
             }
@@ -163,7 +163,7 @@
             margin-bottom: 2.5vw;
         }
 
-            .banner-cada-input-container span {
+            .banner-input-title {
                 font-size: 1.48vw;
             }
 
@@ -241,7 +241,7 @@
                 font-size: 2.7vw;
             }
 
-            .banner-cada-input-container span {
+            .banner-input-title {
                 font-size: 1.3vw;
             }
 
@@ -295,7 +295,7 @@
         width: 30%;
     }
 
-        .banner-cada-input-container span {
+        .banner-input-title {
             font-size: 1.25vw;
         }
 

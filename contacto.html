@@ -58,17 +58,17 @@
         <form action="" method="post" autocomplete="off" name="google-sheet">
             <div class="banner-inputs-row1-container">
                 <div class="banner-cada-input-container">
-                    <span>Nombre</span>
+                    <span class="banner-input-title">Nombre</span>
                     <input type="text" name="Name" id="name">
                     <span class="input-alert" id="name-check"></span>
                 </div>
                 <div class="banner-cada-input-container">
-                    <span>Correo electronico</span>
+                    <span class="banner-input-title">Correo electronico</span>
                     <input type="email" name="Email" id="email">
                     <span class="input-alert" id="email-check"></span>
                 </div>
                 <div class="banner-cada-input-container">
-                    <span>Asunto</span>
+                    <span class="banner-input-title">Asunto</span>
                     <input type="text" name="Subject" id="subject">
                     <span class="input-alert" id="subject-check"></span>
                 </div>
@@ -76,7 +76,7 @@
 
             <div class="banner-inputs-row2-container">
                 <div class="banner-input-message-container">
-                    <span>Mensaje</span>
+                    <span class="banner-input-title">Mensaje</span>
                     <textarea name="Message" id="message" cols="60" rows="5"></textarea>
                     <span class="input-alert" id="message-check"></span>
                 </div>
@@ -167,7 +167,7 @@
             if (email == "") {
                 isEmailValid = false;
                 emailCheck.innerHTML = "*Campo vacio";
-            } else if (!email.test(patternEmail)) {
+            } else if (!patternEmail.test(email)) {
                 isEmailValid = false;
                 emailCheck.innerHTML = "Email invalido";
             } else {
@@ -200,10 +200,13 @@
             // If all inputs are well filled
             if (isNameValid && isEmailValid && isSubjectValid && isMessageValid && isCaptchaValid) {
                 fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => alert("Gracias por contactarnos..! En breve nos pondremos en contacto..."))
+                .then(response => 
+                    // alert("Gracias por contactarnos..! En breve nos pondremos en contacto...")
+                    console.error('Gracias por contactarnos..! En breve nos pondremos en contacto...')
+                )
                 .catch(error => console.error('Error!', error.message));
             } else {
-                alert("Es necesario llenar todos los campos");
+                // alert("Es necesario llenar todos los campos");
             }
         });
     </script>
