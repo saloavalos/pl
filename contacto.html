@@ -201,7 +201,7 @@
             if (isNameValid && isEmailValid && isSubjectValid && isMessageValid && isCaptchaValid) {
                 fetch(scriptURL, { method: 'POST', body: new FormData(form)})
                 .then(response => 
-                    // alert("Gracias por contactarnos..! En breve nos pondremos en contacto...")
+                    alert("Gracias por contactarnos..! En breve nos pondremos en contacto..."),
                     console('Gracias por contactarnos..! En breve nos pondremos en contacto...'),
 
                     // Reset all inputs and captcha
