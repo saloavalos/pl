@@ -105,15 +105,12 @@
 
         .p-seleccionado-image-pop-up {
             transition: .3s ease all;
-            /* transform: scale(0.7); */
             transform: scale(0.32);
             opacity: 0;
-            margin-top: 3%;
         }
 
         .p-seleccionado-image-pop-up.popup-activated {
-            /* transform: scale(1); */
-            transform: scale(.62);
+            transform: scale(.57);
             opacity: 1;
         }
 
@@ -242,7 +239,6 @@
     /* popup */
     .p-seleccionado-image-pop-up {
         transform: scale(0.57);
-        margin-top: 1%;
     }
 
     .p-seleccionado-image-pop-up.popup-activated {
@@ -257,12 +253,10 @@
     /* popup */
     .p-seleccionado-image-pop-up {
         transform: scale(0.47);
-        margin-top: 3%;
     }
 
     .p-seleccionado-image-pop-up.popup-activated {
         transform: scale(.77);
-        opacity: 1;
     }
 
         .p-seleccionado-image-pop-up-cerrar img{

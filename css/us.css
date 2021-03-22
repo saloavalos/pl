@@ -228,8 +228,7 @@
 @media only screen and (min-width: 992px) {
     #banner {
         min-height: 100vh;
-        padding: 108px 5% 10%;
-
+        padding: 9% 5% 10%;
         background-image: url('../images/us/us_bg_banner.png');
         background-position: right;
         background-repeat: no-repeat;

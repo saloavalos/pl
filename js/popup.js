@@ -1,20 +1,19 @@
-// popup para ampliar vista de la imagen principal
+// popup para ampliar la imagen del producto
 
 var	overlay_popup_img = document.getElementById('overlay-popup-img'),
     popup_img = document.getElementById('popup-img'),
     btn_expand_img = document.getElementById('btn-expand-img');
     btn_cerrar_popup_img = document.getElementById('popup-img-cerrar');
     
+// Make visible the popup
 btn_expand_img.addEventListener('click', function(){
     overlay_popup_img.classList.add('overlay-activated');
     popup_img.classList.add('popup-activated');
-
-    // $('body').addClass('stop-scrolling');
     document.querySelector('body').classList.add('stop-scrolling');
 });
 
+// Hide popup if there is a click outside (in the dim bg)
 overlay_popup_img.addEventListener('click', function(){
-    // if($(event.target).attr('id') == $(this).attr('id')) {
     if(window.event.target.id == "overlay-popup-img") {
         overlay_popup_img.classList.remove('overlay-activated');
         popup_img.classList.remove('popup-activated');
@@ -24,6 +23,7 @@ overlay_popup_img.addEventListener('click', function(){
     }
 });
 
+// Hide popup if there is a click in the X
 btn_cerrar_popup_img.addEventListener('click', function(){
     overlay_popup_img.classList.remove('overlay-activated');
     popup_img.classList.remove('popup-activated');
