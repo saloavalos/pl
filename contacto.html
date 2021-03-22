@@ -221,25 +221,28 @@
                 popupContentSubtitle = document.getElementById('popup-content-subtitle');
             
             // If all inputs are well filled
-            if (isNameValid && isEmailValid && isSubjectValid && isMessageValid && isCaptchaValid) {
+            if (isNameValid && isEmailValid && isSubjectValid && isMessageValid &&isCaptchaValid) {
                 // Show either success or failure message
+
+                // I need to configure this popup too, because even though by default is a successful popup
+                // if I got to have an error sending the form the failer popup values will be set as new defaults
+                popupContentImg.src = "images/contact/email_icon.svg",
+                popupContentTitle.innerHTML = "Tu mensaje ha sido enviado correctamente",
+                popupContentSubtitle.innerHTML = "En un lapso de 5 a 15 minutos recibiras un email de confirmación, en caso de no recibirlo intenta ponerte en contacto con nosotros utilizando Whatsapp.",
 
                 fetch(scriptURL, { method: 'POST', body: new FormData(form)})
                 .then(response => 
                     // alert("Gracias por contactarnos..! En breve nos pondremos en contacto..."),
-
-                    // I need to configure this popup too, because even though by default is a successful popup
-                    // if I got to have an error sending the form the failer popup values will be set as new defaults
-                    popupContentImg.src = "images/contact/email_icon.svg",
-                    popupContentTitle.innerHTML = "Tu mensaje ha sido enviado correctamente",
-                    popupContentSubtitle.innerHTML = "En un lapso de 5 a 15 minutos recibiras un email de confirmación, en caso de no recibirlo intenta ponerte en contacto con nosotros utilizando Whatsapp.",
 
                     // Reset all inputs and captcha
                     document.getElementById("myForm").reset(),
                     grecaptcha.reset(),
                     isCaptchaValid = false
                 )
-                .catch(error => console.error('Error!', error.message));
+                .catch(
+                    error => console.error('Error!', error.message)
+                
+                );
             } else {
                 // alert("Es necesario llenar todos los campos");
                 // Configure what the failure popup is going to have on it
