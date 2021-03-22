@@ -215,7 +215,10 @@
             // Declare variables to access to them easily (popup)
             var	overlay_popup_img = document.getElementById('overlay-popup-img'),
                 popup_img = document.getElementById('popup-img'),
-                btn_cerrar_popup_img = document.getElementById('popup-img-cerrar');
+                btn_cerrar_popup_img = document.getElementById('popup-img-cerrar'),
+                popupContentImg = document.getElementById('popup-content-img'),
+                popupContentTitle = document.getElementById('popup-content-title'),
+                popupContentSubtitle = document.getElementById('popup-content-subtitle');
             
             // If all inputs are well filled
             if (isNameValid && isEmailValid && isSubjectValid && isMessageValid && isCaptchaValid) {
@@ -225,8 +228,11 @@
                 .then(response => 
                     // alert("Gracias por contactarnos..! En breve nos pondremos en contacto..."),
 
-                    // Configure what the success popup is going to have on it
-                    // By default the popup is loaded with a successful mesasage, so there is no need of configuration
+                    // I need to configure this popup too, because even though by default is a successful popup
+                    // if I got to have an error sending the form the failer popup values will be set as new defaults
+                    popupContentImg.src = "images/contact/email_icon.svg",
+                    popupContentTitle.innerHTML = "Tu mensaje ha sido enviado correctamente",
+                    popupContentSubtitle.innerHTML = "En un lapso de 5 a 15 minutos recibiras un email de confirmación, en caso de no recibirlo intenta ponerte en contacto con nosotros utilizando Whatsapp.",
 
                     // Reset all inputs and captcha
                     document.getElementById("myForm").reset(),
@@ -237,9 +243,9 @@
             } else {
                 // alert("Es necesario llenar todos los campos");
                 // Configure what the failure popup is going to have on it
-                document.getElementById('popup-content-img').src = "images/contact/try_again_icon.svg";
-                document.getElementById('popup-content-title').innerHTML = "Hubo un error al enviar tu mensaje";
-                document.getElementById('popup-content-subtitle').innerHTML = "Puedes volver a intentar enviarlo, recuerda que también puedes ponerte en contacto con nosotros utilizando Whatsapp.";
+                popupContentImg.src = "images/contact/try_again_icon.svg";
+                popupContentTitle.innerHTML = "Hubo un error al enviar tu mensaje";
+                popupContentSubtitle.innerHTML = "Puedes volver a intentar enviarlo, recuerda que también puedes ponerte en contacto con nosotros utilizando Whatsapp.";
             }
 
             // Make visible the popup
